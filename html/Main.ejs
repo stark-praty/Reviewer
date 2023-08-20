@@ -1,0 +1,361 @@
+<html>
+<head>
+  <title>Reviewer</title>
+  <link rel="shortcut icon" href="images/logo.png" >
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,700;0,800;1,300;1,400;1,600&family=Poppins:ital,wght@0,200;0,300;0,400;0,500;0,600;0,800;0,900;1,200;1,400;1,500;1,600&family=Sahitya:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+  <link rel="stylesheet" type="text/css" href="css/style.css">
+  <script src="https://kit.fontawesome.com/8e71441969.js" crossorigin="anonymous"></script>
+  <!-- The core Firebase JS SDK is always required and must be listed first -->
+  <script src="https://www.gstatic.com/firebasejs/8.3.3/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.3.3/firebase-auth.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.4.1/firebase-firestore.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.3.3/firebase-analytics.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/ui/4.8.0/firebase-ui-auth.js"></script>
+  <link type="text/css" rel="stylesheet" href="https://www.gstatic.com/firebasejs/ui/4.8.0/firebase-ui-auth.css" />
+  <script>
+    // Your web app's Firebase configuration
+    // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+    var firebaseConfig = {
+      apiKey: "AIzaSyAhFq-X3c1QiuC7Idqib8PanP-w8t-SPxY",
+      authDomain: "reviewerwb.firebaseapp.com",
+      databaseURL: "https://reviewerwb-default-rtdb.firebaseio.com",
+      projectId: "reviewerwb",
+      storageBucket: "reviewerwb.appspot.com",
+      messagingSenderId: "96389931582",
+      appId: "1:96389931582:web:41f3da78c47eabd385e76f",
+      measurementId: "G-5G8BL44PH5"
+    };
+    // Initialize Firebase
+    firebase.initializeApp(firebaseConfig);
+    firebase.analytics();
+
+    var user = firebase.auth().currentUser;
+    user.providerData.forEach(function (profile) {
+      console.log("  Sign-in provider: " + profile.providerId);
+      console.log("  Provider-specific UID: " + profile.uid);
+      console.log("  Name: " + profile.displayName);
+      console.log("  Email: " + profile.email);
+      console.log("  Photo URL: " + profile.photoURL);
+    });
+  </script>
+  </head>
+<body>
+  <script src="js/jquery.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+  <script src="js/custom.js"></script>
+  <% if(luser!=null) {%>
+    <% var name = user.displayName; %>
+    <header>
+      <div class="fixed-top navbar-def">
+        <div class="collapse navbar-collapse" id="ToggleExternalContent">
+          <div class="p-3">
+            <ul class="nav navbar-nav navigate">
+                <li><a href="/" class="nav-item btn-d">HOME</a></li>
+                <li><a href="/phone" class="nav-item btn-display">MOBILES</a></li>
+                <li><a href="/entertainment" class="nav-item btn-display">ENTERTAINMENT</a></li>
+                <li><a href="/app" class="nav-item btn-display">APPS</a></li>
+                <li><a href="/about" class="nav-item btn-display">ABOUT</a></li>
+                <li><a href="/contact" class="nav-item btn-display">CONTACT</a></li>
+                <li><a class="nav-item button-d"><%= name %></a></li>
+                <li><a href="/sessionLogout" class="nav-item button-d">LOGOUT</a></li>
+            </ul>
+            </div>
+        </div>
+        <nav class="navbar navbar-dark bg-dark">
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#ToggleExternalContent" aria-controls="ToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation" onclick="myFunction()">
+          <span class="navbar-toggler-icon"></span>
+          </button>
+          <a class="navbar-brand form-inline" title="REVIWER" href="#">
+            <img class="img-logo" src="images/logo.png">Reviewer
+          </a>
+          <form class="form-inline form-search">
+          <input class="form-control mr-sm-2" type="search" placeholder="Search for product, brand and more..." aria-label="Search" style="width:380px;">
+          <button class="btn btn-outline-success my-2 my-sm-0" type="submit"><i class="fa fa-search"></i></button>
+          </form>
+        </nav>
+      </div>
+    </header>
+  <%} else {%>  
+    <header>
+      <div class="fixed-top navbar-def">
+        <div class="collapse navbar-collapse" id="ToggleExternalContent">
+          <div class="p-3">
+            <ul class="nav navbar-nav navigate">
+                <li><a href="/" class="nav-item btn-d">HOME</a></li>
+                <li><a href="/phone" class="nav-item btn-display">MOBILES</a></li>
+                <li><a href="/entertainment" class="nav-item btn-display">ENTERTAINMENT</a></li>
+                <li><a href="/app" class="nav-item btn-display">APPS</a></li>
+                <li><a href="/about" class="nav-item btn-display">ABOUT</a></li>
+                <li><a href="/contact" class="nav-item btn-display">CONTACT</a></li>
+                <li><a href="/login" class="nav-item button-d">LOGIN</a></li>
+            </ul>
+            </div>
+        </div>
+        <nav class="navbar navbar-dark bg-dark">
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#ToggleExternalContent" aria-controls="ToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation" onclick="myFunction()">
+          <span class="navbar-toggler-icon"></span>
+          </button>
+          <a class="navbar-brand form-inline" title="REVIWER" href="#">
+            <img class="img-logo" src="images/logo.png">Reviewer
+          </a>
+          <form class="form-inline form-search">
+          <input class="form-control mr-sm-2" type="search" placeholder="Search for product, brand and more..." aria-label="Search" style="width:380px;">
+          <button class="btn btn-outline-success my-2 my-sm-0" type="submit"><i class="fa fa-search"></i></button>
+          </form>
+        </nav>
+      </div>
+    </header>
+  <% } %>
+  <section class="slider">
+    <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel"data-interval="2500">
+      <ol class="carousel-indicators">
+        <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+        <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+        <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+      </ol>
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <a href="#"><img class="d-block w-100" src="images/f2.jpg" alt="First slide"></a>
+        </div>
+        <div class="carousel-item">
+          <a href="#"><img class="d-block w-100" src="images/f3.jpg" alt="Second slide"></a>
+        </div>
+        <div class="carousel-item">
+          <a href="#"><img class="d-block w-100" src="images/f4.jpg" alt="Third slide"></a>
+        </div>
+      </div>
+      <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="sr-only">Previous</span>
+      </a>
+      <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="sr-only">Next</span>
+      </a>
+    </div>
+  </section>
+  <section class="phone">
+    <div class="card card-p">
+      <div class="row-head-p">
+        <form class="form-inline">
+          <div class="form-group mb-2">
+            <label>Top Rated Phones</label>
+          </div>
+          <button class="btn btn-primary mb-2"><a class="phone-link" href="/phone">More--></a></button>
+        </form>
+        <hr class="lineI">   
+      </div>
+      <div class="row">
+        <div class="product-box">
+          <a href="product-p.htm">
+            <div class="image">
+              <img src="https://fdn2.gsmarena.com/vv/bigpic/samsung-galaxy-s20-plus.jpg">
+            </div>
+            <div class="title">Samsung Galaxy S20+ 5G
+            </div>
+            <div class="more">Mobile
+            </div>
+          </a>
+        </div>
+        <div class="product-box">
+          <a href="product-p.htm">
+            <div class="image">
+              <img src="https://fdn2.gsmarena.com/vv/bigpic/apple-iphone-11-pro.jpg">
+            </div>
+            <div class="title">iPhone 11 Pro Max
+            </div>
+            <div class="more">Mobile
+            </div>
+          </a>
+        </div>
+        <div class="product-box">
+          <a href="product-p.htm">
+            <div class="image">
+              <img src="https://fdn2.gsmarena.com/vv/bigpic/oneplus-8-pro.jpg">
+            </div>
+            <div class="title">Oneplus 8 Pro
+            </div>
+            <div class="more">Mobile
+            </div>
+          </a>
+        </div>
+        <div class="product-box">
+          <a href="product-p.htm">
+            <div class="image">
+              <img src="https://fdn2.gsmarena.com/vv/bigpic/xiaomi-mi-10-5g.jpg">
+            </div>
+            <div class="title">Xiaomi Mi 10 5G
+            </div>
+            <div class="more">Mobile
+            </div>
+          </a>
+        </div>
+        <div class="product-box">
+          <a href="product-p.htm">
+            <div class="image">
+              <img src="https://fdn2.gsmarena.com/vv/bigpic/huawei-p30-pro.jpg">
+            </div>
+            <div class="title">Huawei P30 Pro
+            </div>
+            <div class="more">Mobile
+            </div>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="movies">
+    <div class="card card-m">
+      <div class="row-head-m">
+        <form class="form-inline">
+          <div class="form-group mb-2">
+            <label>Top Rated Movies</label>
+          </div>
+          <button class="btn btn-primary mb-2"><a class="phone-link" href="/entertainment" style="text-decoration-color: #fff;">More--></a></button>
+        </form>
+        <hr class="lineI">   
+      </div>
+      <div class="row">
+        <div class="product-box">
+          <a href="product-m.htm">
+            <div class="image">
+              <img src="https://m.media-amazon.com/images/M/MV5BZmY2YzU4NDktODIxYi00YWIyLWIzYTctODBkYzYzZjc0ODdlXkEyXkFqcGdeQXVyMTEyMjM2NDc2._V1_UX140_CR0,0,140,207_.jpg">
+            </div>
+            <div class="title">DARK
+            </div>
+            <div class="more">TV SERIES
+            </div>
+          </a>
+        </div>
+        <div class="product-box">
+          <a href="product-m.htm">
+            <div class="image">
+              <img src="https://m.media-amazon.com/images/M/MV5BMDFkYTc0MGEtZmNhMC00ZDIzLWFmNTEtODM1ZmRlYWMwMWFmXkEyXkFqcGdeQXVyMTMxODk2OTU@._V1_UX140_CR0,0,140,207_.jpg">
+            </div>
+            <div class="title">Item
+            </div>
+            <div class="more">MOVIE
+            </div>
+          </a>
+        </div>
+        <div class="product-box">
+          <a href="product-m.htm">
+            <div class="image">
+              <img src="https://m.media-amazon.com/images/M/MV5BNGVjNWI4ZGUtNzE0MS00YTJmLWE0ZDctN2ZiYTk2YmI3NTYyXkEyXkFqcGdeQXVyMTkxNjUyNQ@@._V1_UX140_CR0,0,140,207_.jpg">
+            </div>
+            <div class="title">Item2
+            </div>
+            <div class="more">MOVIE
+            </div>
+          </a>
+        </div>
+        <div class="product-box">
+          <a href="product-m.htm">
+            <div class="image">
+              <img src="https://m.media-amazon.com/images/M/MV5BNGVjNWI4ZGUtNzE0MS00YTJmLWE0ZDctN2ZiYTk2YmI3NTYyXkEyXkFqcGdeQXVyMTkxNjUyNQ@@._V1_UX140_CR0,0,140,207_.jpg">
+            </div>
+            <div class="title">Item2
+            </div>
+            <div class="more">MOVIE
+            </div>
+          </a>
+        </div>
+        <div class="product-box">
+          <a href="product-m.htm">
+            <div class="image">
+              <img src="https://m.media-amazon.com/images/M/MV5BNGVjNWI4ZGUtNzE0MS00YTJmLWE0ZDctN2ZiYTk2YmI3NTYyXkEyXkFqcGdeQXVyMTkxNjUyNQ@@._V1_UX140_CR0,0,140,207_.jpg">
+            </div>
+            <div class="title">Item2
+            </div>
+            <div class="more">MOVIE
+            </div>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="apps">
+    <div class="card card-a">
+      <div class="row-head-a">
+        <form class="form-inline">
+          <div class="form-group mb-2">
+            <label>Top Rated Apps</label>
+          </div>
+          <button class="btn btn-primary mb-2"><a class="phone-link" href="/app">More--></a></button>
+        </form>
+        <hr class="lineI">   
+      </div>
+      <div class="row">
+        <div class="product-box">
+          <a href="#">
+            <div class="image">
+              <img src="https://play-lh.googleusercontent.com/cudBRDzsvi50wundWmjnvvaotvejOERDJP4XDur6VtmeiI3aBdGEYmqNVc3Knev5BA=s180-rw" style = "width: 150px; height: 150px;">
+            </div>
+            <div class="title">	HotSchedules
+            </div>
+            <div class="more">Productivity
+            </div>
+          </a>
+        </div>
+        <div class="product-box">
+          <a href="#">
+            <div class="image">
+              <img src="https://play-lh.googleusercontent.com/SSEuGqDVtYwHKRDd35c3dRH1ImB1p35b7Ey5eBToXlz7yuKcqn6GgoYjrSqo9gPCnQ=s180-rw" style = "width: 150px; height: 150px;">
+            </div>
+            <div class="title">Webnovel
+            </div>
+            <div class="more">Books & Reference
+            </div>
+          </a>
+        </div>
+        <div class="product-box">
+          <a href="#">
+            <div class="image">
+              <img src="https://play-lh.googleusercontent.com/vIL5SVs5s307EmCUZ6rWx11YvcoRnk0sMfGB1VCMBD3m78PMGGsZG_3VIwOZoI4TSQ=s180-rw" style = "width: 150px; height: 150px;">
+            </div>
+            <div class="title">Deliveroo
+            </div>
+            <div class="more">Food & Drink
+            </div>
+          </a>
+        </div>
+        <div class="product-box">
+            <a href="#">
+              <div class="image">
+                <img src="https://play-lh.googleusercontent.com/UrY7BAZ-XfXGpfkeWg0zCCeo-7ras4DCoRalC_WXXWTK9q5b0Iw7B0YQMsVxZaNB7DM=s180-rw" style = "width: 150px; height: 150px;">
+              </div>
+              <div class="title">Spotify
+              </div>
+              <div class="more">Music & Audio
+              </div>
+            </a>
+        </div>
+        <div class="product-box">
+          <a href="#">
+            <div class="image">
+              <img src="https://play-lh.googleusercontent.com/l4PdRz_ZURsgohnf9z-4uN2eLgnDTAZXPfcQVo7gNoqR4rYqI0Ed2BQVH51sa_KDNUU=s180-rw" style = "width: 150px; height: 150px;">
+            </div>
+            <div class="title">Alto's Odyssey
+            </div>
+            <div class="more">Action
+            </div>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+  <footer class="footer">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-9">
+                <div class="copyright">
+                    <h6>Copyright &copy; 2020 <a href="#"> Stark Industries </a></h6>
+                </div>
+            </div>
+        </div>
+    </div>
+  </footer>
+</body>
+</html>

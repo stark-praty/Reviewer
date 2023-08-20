@@ -1,0 +1,150 @@
+<html>
+<head>
+  <title>Reviewer</title>
+  <link rel="shortcut icon" href="/images/logo.png" >
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,700;0,800;1,300;1,400;1,600&family=Poppins:ital,wght@0,200;0,300;0,400;0,500;0,600;0,800;0,900;1,200;1,400;1,500;1,600&family=Sahitya:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" type="text/css" href="/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+  <link rel="stylesheet" type="text/css" href="/css/style.css">
+  <link rel="stylesheet" type="text/css" href="/css/more-page-a.css">
+  <script src="https://kit.fontawesome.com/8e71441969.js" crossorigin="anonymous"></script>
+</head>
+<body>
+  <script src="/js/jquery.js"></script>
+  <script src="/js/bootstrap.min.js"></script>
+  <script src="/js/custom.js"></script>
+  <header>
+    <div class="fixed-top navbar-def">
+    <div class="collapse navbar-collapse" id="ToggleExternalContent">
+        <div class="p-3">
+          <ul class="nav navbar-nav navigate">
+            <li><a href="/" class="nav-item btn-d">HOME</a></li>
+            <li><a href="/phone" class="nav-item btn-display">MOBILES</a></li>
+            <li><a href="/entertainment" class="nav-item btn-display">ENTERTAINMENT</a></li>
+            <li><a href="/app" class="nav-item btn-display">APPS</a></li>
+            <li><a href="/about" class="nav-item btn-display">ABOUT</a></li>
+            <li><a href="/contact" class="nav-item btn-display">CONTACT</a></li>
+            <li><a href="/login" class="nav-item button-d">LOGIN</a></li>
+          </ul>
+        </div>
+    </div>
+    <nav class="navbar navbar-dark bg-dark">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#ToggleExternalContent" aria-controls="ToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation" onclick="myFunction()">
+        <span class="navbar-toggler-icon"></span>
+        </button>
+        <a class="navbar-brand form-inline" title="REVIWER" href="#">
+            <img class="img-logo" src="/images/logo.png">Reviewer
+        </a>
+        <form class="form-inline form-search">
+        <input class="form-control mr-sm-2" type="search" placeholder="Search for product, brand and more..." aria-label="Search" style="width:380px;">
+        <button class="btn btn-outline-success my-2 my-sm-0" type="submit"><i class="fa fa-search"></i></button>
+        </form>
+    </nav>
+    </div>
+  </header>
+  <section class="phone-1">
+    <div class="card card-p">
+      <% if(val.length < 190){ %>
+        <div class="row">
+        <% for(let prods of val) { %>    
+            <div class="product-box" style="background-color: linen;margin-right:15px;margin-left:-10px;margin-bottom:15px">
+            <a href="/app/<%= value %>/android?name=<%= prods.title %>">
+                <div class="image">
+                <img src="<%= prods.icon %>" style="height: 150;width: 150;">
+                </div>
+                <div class="#title"> <%= prods.title %>
+                </div>
+                <div class="more"> <%= valu %>
+                </div>
+            </a>
+            </div>
+        <% } %>
+        </div>
+      <% } else { %>
+        <% var a = Math.ceil(val.length/150); %>
+        <% var b = []; %>
+        <%for(var j=1; j<a+1; j++) {%>
+          <%b.push(j.toString());%>
+        <%}%>
+        <% var d = [] %>
+        <%for(var k=0; k<a; k++) {%>
+          <%d.push((k*150).toString());%>
+        <%}%>
+        <% d.push((val.length).toString()) %>
+        <div class="row">
+        <% for(var l = 0; l<=b.length; l++) {%>
+        <% if(b[l] == page) {%>
+        <% for(var i = d[l]; i<d[l+1]; i++) { %>    
+          <div class="product-box" style="background-color: linen;margin-right:15px;margin-left:-10px;margin-bottom:15px">
+          <a href="/app/<%= value %>/android?name=<%= val[i].title %>">
+              <div class="image">
+              <img src="<%= val[i].icon %>" style="height: 150;width: 150;">
+              </div>
+              <div class="#title"> <%= val[i].title %>
+              </div>
+              <div class="more"> <%= valu %>
+              </div>
+          </a>
+          </div>
+        <% } %>
+        <% } %>
+        <% } %>
+        <% if(b[6] == page) {%>
+        <% for(var i = 900; i<1050; i++) { %>    
+          <div class="product-box" style="background-color: linen;margin-right:15px;margin-left:-10px;margin-bottom:15px">
+          <a href="/app/<%= value %>/android?name=<%= val[i].title %>">
+              <div class="image">
+              <img src="<%= val[i].icon %>" style="height: 150;width: 150;">
+              </div>
+              <div class="#title"> <%= val[i].title %>
+              </div>
+              <div class="more"> <%= valu %>
+              </div>
+          </a>
+          </div>
+        <% } %>
+        <% } %>
+        </div>
+        <div class="row">
+          <nav aria-label="Page navigation example">
+            <ul class="pagination justify-content-center">
+              <% if(page == 1) {%>
+              <li class="page-item disabled">
+                <a class="page-link prev" href="#" tabindex="-1">Previous</a>
+              </li>
+              <%} else {%>
+              <li class="page-item">
+                <a class="page-link prev" href="/app/<%= value %>?page=<%= page - 1 %>" tabindex="-1">Previous</a>
+              </li>
+              <% } %>
+              <% for(let j=1; j<a+1; j++) { %>
+                <li class="page-item no"><a class="page-link" href="/app/<%= value %>?page=<%= j %>"> <%= j %> </a></li>              
+              <% } %>
+              <% if(page == a) {%>
+              <li class="page-item disabled">
+                <a class="page-link next disabled" href="#">Next</a>
+              </li>
+              <% } else { %>
+              <li class="page-item">
+                <a class="page-link next" href="/app/<%= value %>?page=<%= Number(page)+1 %>">Next</a>
+              </li>
+              <% } %>
+            </ul>
+          </nav>
+        </div>
+      <% } %> 
+    </div>
+  </section>
+  <footer class="footer">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-9">
+                <div class="copyright">
+                    <h6>Copyright &copy; 2020 <a href="#"> Stark Industries </a></h6>
+                </div>
+            </div>
+        </div>
+    </div>
+  </footer>
+</body>
+</html>

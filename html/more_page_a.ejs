@@ -1,0 +1,310 @@
+<html>
+<head>
+  <title>Reviewer</title>
+  <link rel="shortcut icon" href="images/logo.png" >
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,700;0,800;1,300;1,400;1,600&family=Poppins:ital,wght@0,200;0,300;0,400;0,500;0,600;0,800;0,900;1,200;1,400;1,500;1,600&family=Sahitya:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+  <link rel="stylesheet" type="text/css" href="css/app_a.css">
+  <script src="https://kit.fontawesome.com/8e71441969.js" crossorigin="anonymous"></script>
+</head>
+<body>
+  <script src="/js/jquery.js"></script>
+  <script src="/js/bootstrap.bundle.js"></script>
+  <script src="/js/custom.js"></script>
+  <script src="/js/test.js"></script>
+  <header>
+    <div class="fixed-top navbar-def">
+      <div class="collapse navbar-collapse" id="ToggleExternalContent">
+        <div class="p-3">
+          <ul class="nav navbar-nav navigate">
+              <li><a href="/" class="nav-item btn-d">HOME</a></li>
+              <li><a href="/phone" class="nav-item btn-display">MOBILES</a></li>
+              <li><a href="/entertainment" class="nav-item btn-display">ENTERTAINMENT</a></li>
+              <li><a href="/app" class="nav-item btn-display">APPS</a></li>
+              <li><a href="/about" class="nav-item btn-display">ABOUT</a></li>
+              <li><a href="/contact" class="nav-item btn-display">CONTACT</a></li>
+              <li><a href="/login" class="nav-item button-d">LOGIN</a></li>
+          </ul>
+        </div>
+      </div>
+      <nav class="navbar navbar-dark bg-dark">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#ToggleExternalContent" aria-controls="ToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation" onclick="myFunction()">
+        <span class="navbar-toggler-icon"></span>
+        </button>
+        <a class="navbar-brand form-inline" title="REVIWER" href="#">
+      		<img class="img-logo" src="images/logo.png">Reviewer
+    	  </a>
+        <form class="form-inline form-search">
+        <input class="form-control mr-sm-2" type="search" placeholder="Search for product, brand and more..." aria-label="Search" style="width:380px;">
+        <button class="btn btn-outline-success my-2 my-sm-0" type="submit"><i class="fa fa-search"></i></button>
+        </form>
+      </nav>
+    </div>
+  </header>
+  <section class="phone">
+    <div class="row">
+      <div class="col-md-2">
+        <div class="page-wrapper chiller-theme toggled">
+          <button id="show-sidebar" class="btn btn-sm btn-dark open-btn" href="#" onclick="show()">
+            <i class="fas fa-chevron-right arrow-icon"></i>
+          </button>
+          <nav id="sidebar" class="sidebar-wrapper">
+            <div class="sidebar-content">
+              <button id="close-sidebar" class="btn btn-md btn-dark close-btn" onclick="moveback()"><i class="fas fa-times"></i></button>
+
+              <div class="dropright aabb">
+                <button type="button" class="btn btn-secondary dropdown-toggle btn-dr" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                  GENERAL
+                </button>>
+              
+                <div class="dropdown-menu drop-menu-ge">
+                  <a class="dropdown-item dp-i" href="/app/art_and_design?page=1"> ART & DESIGN  </a>
+                  <a class="dropdown-item dp-i" href="/app/auto_and_vehicles?page=1"> AUTO & VEHICLES  </a>
+                  <a class="dropdown-item dp-i" href="/app/beauty?page=1"> BEAUTY  </a>
+                  <a class="dropdown-item dp-i" href="/app/books_and_reference?page=1"> BOOKS & REFERENCE  </a>
+                  <a class="dropdown-item dp-i" href="/app/business?page=1"> BUSINESS  </a>
+                  <a class="dropdown-item dp-i" href="/app/comics?page=1"> COMICS  </a>
+                  <a class="dropdown-item dp-i" href="/app/communication?page=1"> COMMUNICATION  </a>
+                  <a class="dropdown-item dp-i" href="/app/dating?page=1"> DATING </a>
+                  <a class="dropdown-item dp-i" href="/app/daydream?page=1"> DAYDREAM  </a>
+                  <a class="dropdown-item dp-i" href="/app/education?page=1"> EDUCATION  </a>
+                  <a class="dropdown-item dp-i" href="/app/entertainment?page=1"> ENTERTAINMENT  </a>
+                  <a class="dropdown-item dp-i" href="/app/events?page=1"> EVENTS  </a>
+                  <a class="dropdown-item dp-i" href="/app/finance?page=1"> FINANCE  </a>
+                  <a class="dropdown-item dp-i" href="/app/food_and_drink?page=1"> FOOD & DRINK  </a>
+                  <a class="dropdown-item dp-i" href="/app/health_and_fitness?page=1"> HEALTH & FITNESS  </a>
+                  <a class="dropdown-item dp-i" href="/app/house_and_home?page=1"> HOUSE & HOME </a>
+                  <a class="dropdown-item dp-i" href="/app/libraries_and_demo?page=1"> LIBRARIES & DEMO  </a>
+                  <a class="dropdown-item dp-i" href="/app/lifestyle?page=1"> LIFESTYLE  </a>
+                  <a class="dropdown-item dp-i" href="/app/maps_and_navigation?page=1"> MAPS & NAVIGATION  </a>
+                  <a class="dropdown-item dp-i" href="/app/medical?page=1"> MEDICAL  </a>
+                  <a class="dropdown-item dp-i" href="/app/music_and_audio?page=1"> MUSIC & AUDIO  </a>
+                  <a class="dropdown-item dp-i" href="/app/news_and_magazines?page=1"> NEWS & MAGAZINES  </a>
+                  <a class="dropdown-item dp-i" href="/app/parenting?page=1"> PARENTING  </a>
+                  <a class="dropdown-item dp-i" href="/app/personalization?page=1"> PERSONALIZATION  </a>
+                  <a class="dropdown-item dp-i" href="/app/photograph?page=1"> PHOTOGRAPH  </a>
+                  <a class="dropdown-item dp-i" href="/app/productivity?page=1"> PRODUCTIVITY  </a>
+                  <a class="dropdown-item dp-i" href="/app/shopping?page=1"> SHOPPING  </a>
+                  <a class="dropdown-item dp-i" href="/app/social?page=1"> SOCIAL  </a>
+                  <a class="dropdown-item dp-i" href="/app/tools?page=1"> TOOLS  </a>
+                  <a class="dropdown-item dp-i" href="/app/travel_and_local?page=1"> TRAVEL & LOCAL  </a>
+                  <a class="dropdown-item dp-i" href="/app/video_players_and_editors?page=1"> VIDEO PLAYERS & EDITORS  </a>
+                  <a class="dropdown-item dp-i" href="/app/weather?page=1"> WEATHER  </a>
+                </div>
+              </div>
+              <div class="dropright">
+                <button type="button" class="btn btn-secondary dropdown-toggle btn-dr" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                  GAMES
+                </button>>
+              
+                <div class="dropdown-menu drop-menu-ga">
+                  <a class="dropdown-item dp-i" href="/app/action?page=1"> ACTION  </a>
+                  <a class="dropdown-item dp-i" href="/app/adventure?page=1"> ADVENTURE  </a>
+                  <a class="dropdown-item dp-i" href="/app/arcade?page=1"> ARCADE  </a>
+                  <a class="dropdown-item dp-i" href="/app/board?page=1"> BOARD  </a>
+                  <a class="dropdown-item dp-i" href="/app/card?page=1"> CARD  </a>
+                  <a class="dropdown-item dp-i" href="/app/casino?page=1"> CASINO  </a>
+                  <a class="dropdown-item dp-i" href="/app/casual?page=1"> CASUAL  </a>
+                  <a class="dropdown-item dp-i" href="/app/educational?page=1"> EDUCATIONAL  </a>
+                  <a class="dropdown-item dp-i" href="/app/music?page=1"> MUSIC  </a>
+                  <a class="dropdown-item dp-i" href="/app/puzzle?page=1"> PUZZLE  </a>
+                  <a class="dropdown-item dp-i" href="/app/racing?page=1"> RACING  </a>
+                  <a class="dropdown-item dp-i" href="/app/role_playing?page=1"> ROLE PLAYING  </a>
+                  <a class="dropdown-item dp-i" href="/app/simulation?page=1"> SIMULATION  </a>
+                  <a class="dropdown-item dp-i" href="/app/sports?page=1"> SPORTS  </a>
+                  <a class="dropdown-item dp-i" href="/app/strategy?page=1"> STRATEGY  </a>
+                  <a class="dropdown-item dp-i" href="/app/trivia?page=1"> TRIVIAL  </a>
+                  <a class="dropdown-item dp-i" href="/app/word?page=1"> WORD  </a>
+                </div>
+              </div> 
+            
+            </div>
+          </nav>
+        </div>
+      </div>
+      <div class="col-md-10">
+        <div class="card card-p" style="margin-top: 75px;">
+          <div class="row-head-p">
+            <form class="form-inline">
+              <div class="form-group mb-2">
+                <label>Top Trending Apps</label>
+              </div>
+            </form>
+            <hr class="lineI">   
+          </div>
+          <div class="row">
+            <div class="product-box">
+              <a href="/app/finance/android?name=Google%20Pay:%20A%20safe%20&%20helpful%20way%20to%20manage%20money">
+                <div class="image">
+                  <img src="https://play-lh.googleusercontent.com/HArtbyi53u0jnqhnnxkQnMx9dHOERNcprZyKnInd2nrfM7Wd9ivMNTiz7IJP6-mSpwk=s180-rw" style = "width: 150px; height: 150px;">
+                </div>
+                <div class="title">Google Pay: A safe & helpful way to manage money
+                </div>
+                <div class="more">Finance
+                </div>
+              </a>
+            </div>
+            <div class="product-box">
+              <a href="/app/education/android?name=SkyView®%20Explore%20the%20Universe">
+                <div class="image">
+                  <img src="https://play-lh.googleusercontent.com/FbT_XWX5IYXQUt2fWug_vEyOdAWORIBe5ipHETfEvL6QVklVRU0NEFUgMeUN6mM73QY=s180-rw" style = "width: 150px; height: 150px;">
+                </div>
+                <div class="title">SkyView® Explore the Universe
+                </div>
+                <div class="more">Education
+                </div>
+              </a>
+            </div>
+            <div class="product-box">
+              <a href="/app/entertainment/android?name=HBO%20Max:%20Stream%20HBO,%20TV,%20Movies%20&%20More">
+                <div class="image">
+                  <img src="https://play-lh.googleusercontent.com/mTLXQm3MIjZO_U3LIJ2EKacnIKo_1wmThe-UZsj3kkXAqHtbd35JvUZ8YR96zIkJdQ=s180-rw" style = "width: 150px; height: 150px;">
+                </div>
+                <div class="title">HBO Max: Stream HBO, TV, Movies & More
+                </div>
+                <div class="more">Entertainment
+                </div>
+              </a>
+            </div>
+            <div class="product-box">
+              <a href="/app/music_and_audio/android?name=Poweramp%20Full%20Version%20Unlocker">
+                <div class="image">
+                  <img src="https://play-lh.googleusercontent.com/-iLvjuYZN_1CZAZ2eRy3MhzYopqcPo1zOahGHv97dkk3y9JVarLFHIcr_jiPzyt90Kk=s180-rw" style = "width: 150px; height: 150px;">
+                </div>
+                <div class="title">Poweramp Full Version Unlocker
+                </div>
+                <div class="more">Music & Audio
+                </div>
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="card card-m" style="margin-top: 25px;">
+          <div class="row-head-m">
+            <form class="form-inline">
+              <div class="form-group mb-2">
+                <label>Most Used Apps</label>
+              </div>
+            </form>
+            <hr class="lineI">   
+          </div>
+          <div class="row">
+            <div class="product-box">
+              <a href="/app/business/android?name=ZOOM%20Cloud%20Meetings">
+                <div class="image">
+                  <img src="https://play-lh.googleusercontent.com/JgU6AIREDMsGLmrFSJ8OwLb-JJVw_jwqdwEZWUHemAj0V5Dl7i7GOpmranv2GsCKobM=s180-rw" style = "width: 150px; height: 150px;">
+                </div>
+                <div class="title">ZOOM Cloud Meetings
+                </div>
+                <div class="more">Business
+                </div>
+              </a>
+            </div>
+            <div class="product-box">
+              <a href="/app/communication/android?name=WhatsApp%20Messenger">
+                <div class="image">
+                  <img src="https://play-lh.googleusercontent.com/bYtqbOcTYOlgc6gqZ2rwb8lptHuwlNE75zYJu6Bn076-hTmvd96HH-6v7S0YUAAJXoJN=s180-rw" style = "width: 150px; height: 150px;">
+                </div>
+                <div class="title">WhatsApp Messenger
+                </div>
+                <div class="more">Communication
+                </div>
+              </a>
+            </div>
+            <div class="product-box">
+              <a href="/app/social/android?name=Instagram">
+                <div class="image">
+                  <img src="https://play-lh.googleusercontent.com/c2DcVsBUhJb3UlAGABHwafpuhstHwORpVwWZ0RvWY7NPrgdtT2o4JRhcyO49ehhUNRca=s180-rw" style = "width: 150px; height: 150px;">
+                </div>
+                <div class="title">Instagram
+                </div>
+                <div class="more">Social
+                </div>
+              </a>
+            </div>
+            <div class="product-box">
+              <a href="/app/video_players_and_editors/android?name=YouTube">
+                <div class="image">
+                  <img src="https://play-lh.googleusercontent.com/lMoItBgdPPVDJsNOVtP26EKHePkwBg-PkuY9NOrc-fumRtTFP4XhpUNk_22syN4Datc=s180-rw" style = "width: 150px; height: 150px;">
+                </div>
+                <div class="title">YouTube
+                </div>
+                <div class="more">Video Players & Editors
+                </div>
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="card card-a" style="margin-top: 25px;">
+          <div class="row-head-a">
+            <form class="form-inline">
+              <div class="form-group mb-2">
+                <label>Top Games</label>
+              </div>
+            </form>
+            <hr class="lineI">   
+          </div>
+          <div class="row">
+            <div class="product-box">
+              <a href="/app/action/android?name=Call%20of%20Duty®:%20Mobile">
+                <div class="image">
+                  <img src="https://play-lh.googleusercontent.com/_vYBCFqUqqy7wXA_LxcnHtgy5VA2dHP4qv2x8PV9-uRzU84KWkn4qj9c7etTAX_6Dzo=s180-rw" style = "width: 150px; height: 150px;">
+                </div>
+                <div class="title">Call of Duty®: Mobile
+                </div>
+                <div class="more">Action
+                </div>
+              </a>
+            </div>
+            <div class="product-box">
+              <a href="/app/arcade/android?name=Minecraft">
+                <div class="image">
+                  <img src="https://play-lh.googleusercontent.com/VSwHQjcAttxsLE47RuS4PqpC4LT7lCoSjE7Hx5AW_yCxtDvcnsHHvm5CTuL5BPN-uRTP=s180-rw" style = "width: 150px; height: 150px;">
+                </div>
+                <div class="title">Minecraft
+                </div>
+                <div class="more">Arcade
+                </div>
+              </a>
+            </div>
+            <div class="product-box">
+              <a href="/app/arcade/android?name=Join%20Clash%203D">
+                <div class="image">
+                  <img src="https://play-lh.googleusercontent.com/nWk99F4mxv0uyt5Yt5No21uCE4Ah0NwYK6MXfYp1zZg2iFd9ImaeEiu8R8We1iGeHtg=s180-rw" style = "width: 150px; height: 150px;">
+                </div>
+                <div class="title">Join Clash 3D
+                </div>
+                <div class="more">Arcade
+                </div>
+              </a>
+            </div>
+            <div class="product-box">
+                <a href="/app/strategy/android?name=Last%20Shelter:%20Survival">
+                  <div class="image">
+                    <img src="https://play-lh.googleusercontent.com/DVGGdf1jXL0dQQzUCe_TvYhSysFdL_imCgZtAMdlY7eWjUAF1x4UzZtkX1KAXiXISQ=s180-rw" style = "width: 150px; height: 150px;">
+                  </div>
+                  <div class="title">Last Shelter: Survival
+                  </div>
+                  <div class="more">Strategy
+                  </div>
+                </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <footer class="footer">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-9">
+                <div class="copyright">
+                    <h6>Copyright &copy; 2020 <a href="#"> Stark Industries </a></h6>
+                </div>
+            </div>
+        </div>
+    </div>
+  </footer>
+</body>
+</html>

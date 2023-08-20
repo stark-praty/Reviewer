@@ -1,0 +1,144 @@
+section{
+  overflow: hidden;
+  margin-top: 80px;
+  margin-left: 40px;
+  margin-right: 60px;
+  padding-right: 0;
+  background-color: white;
+  box-shadow: 0 6px 10px 0 rgba(0, 0, 0, 0.19);
+}
+.row-1{
+  margin-top: 15;
+  margin-left:40px;
+  margin-right: -124;
+}
+.display{
+  margin-top: -60;
+  margin-bottom: 45;
+  height: 500;
+}
+.image-responsive{
+  margin-left: 200px;
+  height:480px;
+  width:300px;
+}
+.image-responsive-I{
+  margin-top: 50px;
+  margin-left: 15px;
+  width:643px;
+  height:350px;
+}
+.carousel{
+  width: 668px;
+}
+.carousel-indicators{
+margin-left: 320px;
+margin-bottom: -200px;
+width: 75px;
+background-color: black;
+opacity: 0.3;
+}
+/*.butn a{
+background-color: lightgray;
+}*/
+.carousel-control-prev{
+margin-top: 200px;
+border-radius: 50%;
+width: 75px;
+height: 75px;
+}
+.carousel-control-prev:hover{
+background-color: black;
+opacity: 0.2;
+}
+.carousel-control-next{
+margin-top: 200px;
+border-radius: 50%;
+width: 75px;
+height: 75px;
+}
+.carousel-control-next:hover{
+background-color: black;
+opacity: 0.2;
+}
+.col-content{
+  padding-right: -15;
+  margin-bottom: -60;
+  background-color: whitesmoke;
+}
+.col-content div{
+  padding-left: 25;
+}
+.title{
+  margin-top: 15;
+  margin-bottom: 0;
+  padding-bottom: -20;
+}
+.description{
+  margin-top: -10;
+  margin-bottom: 25;
+}
+.col-md-11 a{
+  text-decoration: none;
+}
+.col-md-11 span{
+  margin-bottom: 10;
+}
+.row-rating{
+  margin-top: -8;
+  margin-bottom: 15;
+}
+.badge-dark{
+  margin-left: 10;
+  padding: 5;
+  font-size: 14px;
+}
+.bi{
+  color:  rgb(228, 196, 15);
+}
+.monospaced a{
+  text-decoration: none;
+  color: black;
+  font-size: 19;
+}
+.bagde-watch , .bagde-watchList{
+  margin-top: 20;
+  margin-bottom: 5;
+  background-color: rgb(32, 102, 194);
+  color: white;
+  padding: 10;
+  font-size: 20px;
+  font-family:'Times New Roman', Times, serif ;
+  font-weight: normal;
+  font-style: oblique;
+  text-decoration: none;
+}
+.bagde-watchList{
+  margin-left: 10;
+  background-color:rgb(175, 175, 175);
+  color: black;
+}
+.about,small,.notes{
+  margin-left: -40;
+  margin-top: -15;
+}
+.row-cast{
+  font-family: 'Poppins',sans-serif;
+}
+.dots{
+  text-align: center;
+}
+.chna{
+  text-align: right;
+}
+.row-2{
+  margin-top: 50;
+  width: 1688;
+  margin-left: 10;
+}
+.row-navig{
+  padding-left: 10;
+  padding-top: 10;
+  margin-bottom: 5;
+  background-color: whitesmoke;
+}

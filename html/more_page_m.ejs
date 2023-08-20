@@ -1,0 +1,337 @@
+<html>
+<head>
+  <title>Reviewer</title>
+  <link rel="shortcut icon" href="images/logo.png" >
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,700;0,800;1,300;1,400;1,600&family=Poppins:ital,wght@0,200;0,300;0,400;0,500;0,600;0,800;0,900;1,200;1,400;1,500;1,600&family=Sahitya:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+  <link rel="stylesheet" type="text/css" href="css/movies_m.css">
+  <script src="https://kit.fontawesome.com/8e71441969.js" crossorigin="anonymous"></script>
+</head>
+<body>
+  <script src="/js/jquery.js"></script>
+  <script src="/js/bootstrap.bundle.js"></script>
+  <script src="/js/custom.js"></script>
+  <script src="/js/test.js"></script>
+  <header>
+    <div class="fixed-top navbar-def">
+      <div class="collapse navbar-collapse" id="ToggleExternalContent">
+        <div class="p-3">
+          <ul class="nav navbar-nav navigate">
+              <li><a href="/" class="nav-item btn-d">HOME</a></li>
+              <li><a href="/phone" class="nav-item btn-display">MOBILES</a></li>
+              <li><a href="/entertainment" class="nav-item btn-display">ENTERTAINMENT</a></li>
+              <li><a href="/app" class="nav-item btn-display">APPS</a></li>
+              <li><a href="/about" class="nav-item btn-display">ABOUT</a></li>
+              <li><a href="/contact" class="nav-item btn-display">CONTACT</a></li>
+              <li><a href="/login" class="nav-item button-d">LOGIN</a></li>
+          </ul>
+        </div>
+      </div>
+      <nav class="navbar navbar-dark bg-dark">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#ToggleExternalContent" aria-controls="ToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation" onclick="myFunction()">
+        <span class="navbar-toggler-icon"></span>
+        </button>
+        <a class="navbar-brand form-inline" title="REVIWER" href="#">
+      		<img class="img-logo" src="images/logo.png">Reviewer
+    	  </a>
+        <form class="form-inline form-search">
+        <input class="form-control mr-sm-2" type="search" placeholder="Search for product, brand and more..." aria-label="Search" style="width:380px;">
+        <button class="btn btn-outline-success my-2 my-sm-0" type="submit"><i class="fa fa-search"></i></button>
+        </form>
+      </nav>
+    </div>
+  </header>
+  <section class="phone">
+    <div class="row">
+      <div class="col-md-2">
+        <div class="page-wrapper chiller-theme toggled">
+          <button id="show-sidebar" class="btn btn-sm btn-dark open-btn" href="#" onclick="show()">
+            <i class="fas fa-chevron-right arrow-icon"></i>
+          </button>
+          <nav id="sidebar" class="sidebar-wrapper">
+            <div class="sidebar-content">
+              <button id="close-sidebar" class="btn btn-md btn-dark close-btn" onclick="moveback()"><i class="fas fa-times"></i></button>
+
+              <div class="dropright aabb">
+                <button type="button" class="btn btn-secondary dropdown-toggle btn-dr" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                  MOVIES
+                </button>
+              
+                <div class="dropdown-menu drop-menu-ge">
+                  <a class="dropdown-item dp-i" href="/entertainment/movies/2020?page=1"> 2020 </a>
+                  <a class="dropdown-item dp-i" href="/entertainment/movies/2019?page=1"> 2019 </a>
+                  <a class="dropdown-item dp-i" href="/entertainment/movies/2018?page=1"> 2018 </a>
+                  <a class="dropdown-item dp-i" href="/entertainment/movies/2017?page=1"> 2017 </a>
+                  <a class="dropdown-item dp-i" href="/entertainment/movies/2016?page=1"> 2016 </a>
+                  <a class="dropdown-item dp-i" href="/entertainment/movies/2015?page=1"> 2015 </a>
+                  <a class="dropdown-item dp-i" href="/entertainment/movies/2014?page=1"> 2014 </a>
+                  <a class="dropdown-item dp-i" href="/entertainment/movies/2013?page=1"> 2013 </a>
+                  <a class="dropdown-item dp-i" href="/entertainment/movies/2012?page=1"> 2012 </a>
+                  <a class="dropdown-item dp-i" href="/entertainment/movies/2011?page=1"> 2011 </a>
+                </div>
+              </div>
+              <div class="dropright">
+                <button type="button" class="btn btn-secondary dropdown-toggle btn-dr" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                  TV SERIES
+                </button>
+              
+                <div class="dropdown-menu drop-menu-ga">
+                  <a class="dropdown-item dp-i" href="/entertainment/tv_series/2020?page=1"> 2020 </a>
+                  <a class="dropdown-item dp-i" href="/entertainment/tv_series/2019?page=1"> 2019 </a>
+                  <a class="dropdown-item dp-i" href="/entertainment/tv_series/2018?page=1"> 2018 </a>
+                  <a class="dropdown-item dp-i" href="/entertainment/tv_series/2017?page=1"> 2017 </a>
+                  <a class="dropdown-item dp-i" href="/entertainment/tv_series/2016?page=1"> 2016 </a>
+                  <a class="dropdown-item dp-i" href="/entertainment/tv_series/2015?page=1"> 2015 </a>
+                  <a class="dropdown-item dp-i" href="/entertainment/tv_series/2014?page=1"> 2014 </a>
+                  <a class="dropdown-item dp-i" href="/entertainment/tv_series/2013?page=1"> 2013 </a>
+                  <a class="dropdown-item dp-i" href="/entertainment/tv_series/2012?page=1"> 2012 </a>
+                  <a class="dropdown-item dp-i" href="/entertainment/tv_series/2011?page=1"> 2011 </a>
+                </div>
+              </div> 
+            
+            </div>
+          </nav>
+        </div>
+      </div>
+      <div class="col-md-10">
+        <div class="card card-p" style="margin-top: 75px;">
+          <div class="row-head-p">
+            <form class="form-inline">
+              <div class="form-group mb-2">
+                <label>Top Trending Movies</label>
+              </div>
+            </form>
+            <hr class="lineI">   
+          </div>
+          <div class="row">
+            <div class="product-box">
+              <a href="/app/finance/android?name=Google%20Pay:%20A%20safe%20&%20helpful%20way%20to%20manage%20money">
+                <div class="image">
+                  <img src="https://m.media-amazon.com/images/M/MV5BY2QwZTIzYzUtYTM1Yi00NzRkLTlmYWItMmFmM2YzMTJhZjQ1XkEyXkFqcGdeQXVyODE5NzE3OTE@._V1_UX182_CR0,0,182,268_AL__QL50.jpg">
+                </div>
+                <div class="title">Shakeela
+                </div>
+                <div class="more">MOVIE
+                </div>
+              </a>
+            </div>
+            <div class="product-box">
+              <a href="/app/education/android?name=SkyView®%20Explore%20the%20Universe">
+                <div class="image">
+                  <img src="https://m.media-amazon.com/images/M/MV5BZDVlNjFhYzUtMjljMC00MWExLTljNGQtY2U5NWFlMmVjNGY4XkEyXkFqcGdeQXVyMTE2MjAzMTU3._V1_UY268_CR9,0,182,268_AL__QL50.jpg">
+                </div>
+                <div class="title">Indoo Ki Jawani
+                </div>
+                <div class="more">MOVIE
+                </div>
+              </a>
+            </div>
+            <div class="product-box">
+              <a href="/app/entertainment/android?name=HBO%20Max:%20Stream%20HBO,%20TV,%20Movies%20&%20More">
+                <div class="image">
+                  <img src="https://m.media-amazon.com/images/M/MV5BNTRkYzA1ZjctNzE5OS00MTYxLWI3ZTQtYjk3YjU1NjFjMTJiXkEyXkFqcGdeQXVyODI2MzM0MTM@._V1_UY268_CR2,0,182,268_AL__QL50.jpg">
+                </div>
+                <div class="title">Paurashpur
+                </div>
+                <div class="more">MOVIE
+                </div>
+              </a>
+            </div>
+            <div class="product-box">
+              <a href="/app/music_and_audio/android?name=Poweramp%20Full%20Version%20Unlocker">
+                <div class="image">
+                  <img src="https://m.media-amazon.com/images/M/MV5BZTA2MDIwZDktNzBkZi00M2MwLThkYjEtNWFjZWMzOTU3NWQxXkEyXkFqcGdeQXVyODE5NzE3OTE@._V1_UX182_CR0,0,182,268_AL__QL50.jpg">
+                </div>
+                <div class="title">The White Tiger
+                </div>
+                <div class="more">MOVIE
+                </div>
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="card card-m" style="margin-top: 25px;">
+          <div class="row-head-m">
+            <form class="form-inline">
+              <div class="form-group mb-2">
+                <label>Top Trending TV Series</label>
+              </div>
+            </form>
+            <hr class="lineI">   
+          </div>
+          <div class="row">
+            <div class="product-box">
+              <a href="/app/business/android?name=ZOOM%20Cloud%20Meetings">
+                <div class="image">
+                  <img src="https://m.media-amazon.com/images/M/MV5BZDhlMzY0ZGItZTcyNS00ZTAxLWIyMmYtZGQ2ODg5OWZiYmJkXkEyXkFqcGdeQXVyODkzNTgxMDg@._V1_UX182_CR0,0,182,268_AL__QL50.jpg">
+                </div>
+                <div class="title">The Mandalorian
+                </div>
+                <div class="more">TV SERIES
+                </div>
+              </a>
+            </div>
+            <div class="product-box">
+              <a href="/app/communication/android?name=WhatsApp%20Messenger">
+                <div class="image">
+                  <img src="https://m.media-amazon.com/images/M/MV5BZmY0MzBlNjctNTRmNy00Njk3LWFjMzctMWQwZDAwMGJmY2MyXkEyXkFqcGdeQXVyMDM2NDM2MQ@@._V1_UX182_CR0,0,182,268_AL__QL50.jpg">
+                </div>
+                <div class="title">The Crown
+                </div>
+                <div class="more">TV SERIES
+                </div>
+              </a>
+            </div>
+            <div class="product-box">
+              <a href="/app/social/android?name=Instagram">
+                <div class="image">
+                  <img src="https://m.media-amazon.com/images/M/MV5BMGMzYzFmYzQtODM1OS00ODRhLTk2MjgtMGY5NGE5OTliMjNlXkEyXkFqcGdeQXVyMTkxNjUyNQ@@._V1_UY268_CR4,0,182,268_AL__QL50.jpg">
+                </div>
+                <div class="title">Virgin River
+                </div>
+                <div class="more">TV SERIES
+                </div>
+              </a>
+            </div>
+            <div class="product-box">
+              <a href="/app/video_players_and_editors/android?name=YouTube">
+                <div class="image">
+                  <img src="https://m.media-amazon.com/images/M/MV5BZTA0N2U0NGYtZDQyYy00ZTI1LWI0MWMtMjkxZDI0MzhlZGE3XkEyXkFqcGdeQXVyNzE3ODQxNjU@._V1_UX182_CR0,0,182,268_AL__QL50.jpg">
+                </div>
+                <div class="title">The Flight Attendant
+                </div>
+                <div class="more">TV SERIES
+                </div>
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="card card-v" style="margin-top: 25px;">
+          <div class="row-head-a">
+            <form class="form-inline">
+              <div class="form-group mb-2">
+                <label>Most Watched Movies</label>
+              </div>
+            </form>
+            <hr class="lineI">   
+          </div>
+          <div class="row">
+            <div class="product-box">
+              <a href="/app/action/android?name=Call%20of%20Duty®:%20Mobile">
+                <div class="image">
+                  <img src="https://m.media-amazon.com/images/M/MV5BMDdmZGU3NDQtY2E5My00ZTliLWIzOTUtMTY4ZGI1YjdiNjk3XkEyXkFqcGdeQXVyNTA4NzY1MzY@._V1_UX182_CR0,0,182,268_AL__QL50.jpg">
+                </div>
+                <div class="title">Titanic
+                </div>
+                <div class="more">MOVIE
+                </div>
+              </a>
+            </div>
+            <div class="product-box">
+              <a href="/app/arcade/android?name=Minecraft">
+                <div class="image">
+                  <img src="https://m.media-amazon.com/images/M/MV5BNzA5ZDNlZWMtM2NhNS00NDJjLTk4NDItYTRmY2EwMWZlMTY3XkEyXkFqcGdeQXVyNzkwMjQ5NzM@._V1_UX182_CR0,0,182,268_AL__QL50.jpg">
+                </div>
+                <div class="title">The Lord of the Rings: The Return of the King
+                </div>
+                <div class="more">MOVIE
+                </div>
+              </a>
+            </div>
+            <div class="product-box">
+              <a href="/app/arcade/android?name=Join%20Clash%203D">
+                <div class="image">
+                  <img src="https://m.media-amazon.com/images/M/MV5BMTQ2ODFlMDAtNzdhOC00ZDYzLWE3YTMtNDU4ZGFmZmJmYTczXkEyXkFqcGdeQXVyMTQxNzMzNDI@._V1_UX182_CR0,0,182,268_AL__QL50.jpg">
+                </div>
+                <div class="title">E.T. the Extra-Terrestrial
+                </div>
+                <div class="more">MOVIE
+                </div>
+              </a>
+            </div>
+            <div class="product-box">
+                <a href="/app/strategy/android?name=Last%20Shelter:%20Survival">
+                  <div class="image">
+                    <img src="https://m.media-amazon.com/images/M/MV5BNDYxNjQyMjAtNTdiOS00NGYwLWFmNTAtNThmYjU5ZGI2YTI1XkEyXkFqcGdeQXVyMTMxODk2OTU@._V1_UX182_CR0,0,182,268_AL__QL50.jpg">
+                  </div>
+                  <div class="title">The Avengers
+                  </div>
+                  <div class="more">MOVIE
+                  </div>
+                </a>
+            </div>
+          </div>
+        </div>
+        <div class="card card-a" style="margin-top: 25px;">
+          <div class="row-head-a">
+            <form class="form-inline">
+              <div class="form-group mb-2">
+                <label>Most Watched TV Series</label>
+              </div>
+            </form>
+            <hr class="lineI">   
+          </div>
+          <div class="row">
+            <div class="product-box">
+              <a href="/app/action/android?name=Call%20of%20Duty®:%20Mobile">
+                <div class="image">
+                  <img src="https://m.media-amazon.com/images/M/MV5BYTRiNDQwYzAtMzVlZS00NTI5LWJjYjUtMzkwNTUzMWMxZTllXkEyXkFqcGdeQXVyNDIzMzcwNjc@._V1_UY268_CR7,0,182,268_AL__QL50.jpg">
+                </div>
+                <div class="title">Game of Thrones
+                </div>
+                <div class="more">TV SERIES
+                </div>
+              </a>
+            </div>
+            <div class="product-box">
+              <a href="/app/arcade/android?name=Minecraft">
+                <div class="image">
+                  <img src="https://m.media-amazon.com/images/M/MV5BYTUwOTM3ZGUtMDZiNy00M2I3LWI1ZWEtYzhhNGMyZjI3MjBmXkEyXkFqcGdeQXVyMTkxNjUyNQ@@._V1_UX182_CR0,0,182,268_AL__QL50.jpg">
+                </div>
+                <div class="title">The Walking Dead
+                </div>
+                <div class="more">TV SERIES
+                </div>
+              </a>
+            </div>
+            <div class="product-box">
+              <a href="/app/arcade/android?name=Join%20Clash%203D">
+                <div class="image">
+                  <img src="https://m.media-amazon.com/images/M/MV5BNDYxOTU0NDYtYzg2MC00YzgyLTg1YzctMDc1MGJmOGIzMTc3XkEyXkFqcGdeQXVyMzQ2MDI5NjU@._V1_UX182_CR0,0,182,268_AL__QL50.jpg">
+                </div>
+                <div class="title">Riverdale
+                </div>
+                <div class="more">TV SERIES
+                </div>
+              </a>
+            </div>
+            <div class="product-box">
+                <a href="/app/strategy/android?name=Last%20Shelter:%20Survival">
+                  <div class="image">
+                    <img src="https://m.media-amazon.com/images/M/MV5BMjgwNGNkZGYtMWQyYS00YjEzLWFmZTctODUzYWMxOWJkNTAzXkEyXkFqcGdeQXVyMTkxNjUyNQ@@._V1_UX182_CR0,0,182,268_AL__QL50.jpg">
+                  </div>
+                  <div class="title">Grey's Anatomy
+                  </div>
+                  <div class="more">TV SERIES
+                  </div>
+                </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <footer class="footer">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-9">
+                <div class="copyright">
+                    <h6>Copyright &copy; 2020 <a href="#"> Stark Industries </a></h6>
+                </div>
+            </div>
+        </div>
+    </div>
+  </footer>
+</body>
+</html>

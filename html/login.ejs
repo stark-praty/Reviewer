@@ -1,0 +1,133 @@
+<html>
+<head>
+  <title>Reviewer</title>
+  <meta name="google-signin-client_id" content="852896030697-rq3b5j9u0a02jm38ka7bvtsj8jr2uk2r.apps.googleusercontent.com">
+  <link rel="shortcut icon" href="/images/logo.png" >
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,700;0,800;1,300;1,400;1,600&family=Poppins:ital,wght@0,200;0,300;0,400;0,500;0,600;0,800;0,900;1,200;1,400;1,500;1,600&family=Sahitya:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" type="text/css" href="/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+  <link rel="stylesheet" type="text/css" href="/css/style.css">
+  <script src="https://kit.fontawesome.com/8e71441969.js" crossorigin="anonymous"></script>
+
+  <script src="https://www.gstatic.com/firebasejs/8.3.3/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.3.3/firebase-auth.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.3.3/firebase-analytics.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/ui/4.8.0/firebase-ui-auth.js"></script>
+  <link type="text/css" rel="stylesheet" href="https://www.gstatic.com/firebasejs/ui/4.8.0/firebase-ui-auth.css" />
+  <script src="https://cdn.jsdelivr.net/npm/js-cookie@rc/dist/js.cookie.min.js"></script>
+  <script type="text/javascript">
+    const firebaseConfig = {
+      apiKey: "AIzaSyAhFq-X3c1QiuC7Idqib8PanP-w8t-SPxY",
+      authDomain: "reviewerwb.firebaseapp.com",
+      databaseURL: "https://reviewerwb-default-rtdb.firebaseio.com",
+      projectId: "reviewerwb",
+      storageBucket: "reviewerwb.appspot.com",
+      messagingSenderId: "96389931582",
+      appId: "1:96389931582:web:41f3da78c47eabd385e76f",
+      measurementId: "G-5G8BL44PH5"
+    };
+    firebase.initializeApp(firebaseConfig);
+    firebase.analytics();
+
+    firebase.auth().setPersistence(firebase.auth.Auth.Persistence.NONE);
+
+    var CLIENT_ID ='96389931582-8tsvh3tlgicqleaomglkqsleh96ro37t.apps.googleusercontent.com';
+    var uiConfig = {
+      callbacks: {
+        signInSuccess: function (user,credential, redirectUrl) {
+          // User successfully signed in.
+          firebase.auth().onAuthStateChanged(({user}) => {
+            return user.getIdToken().then(idToken => {
+              const csrfToken = getCookie('XSRF-TOKEN');
+              return postIdTokenToSessionLogin('/sessionLogin', idToken, csrfToken);
+            });
+            return firebase.auth().signOut();
+            window.location.assign('/profile');
+          })
+        },
+        uiShown: function() {
+          document.getElementById('loader').style.display = 'none';
+        }
+      },
+      signInFlow: 'popup',
+      signInOptions: [
+        firebase.auth.GoogleAuthProvider.PROVIDER_ID,
+        firebase.auth.FacebookAuthProvider.PROVIDER_ID,
+        firebase.auth.EmailAuthProvider.PROVIDER_ID,
+        firebase.auth.PhoneAuthProvider.PROVIDER_ID
+      ],
+      // Terms of service url.
+      tosUrl: '/',
+      // Privacy policy url.
+      privacyPolicyUrl: '/'
+    };
+    var ui = new firebaseui.auth.AuthUI(firebase.auth());
+    ui.start('#firebaseui-auth-container', uiConfig);
+
+  </script>
+
+</head>
+<body>
+  <script src="/js/jquery.js"></script>
+  <script src="/js/bootstrap.min.js"></script>
+  <script src="/js/custom.js"></script>
+  
+  <header>
+    <div class="fixed-top navbar-def">
+    <div class="collapse navbar-collapse" id="ToggleExternalContent">
+        <div class="p-3">
+          <ul class="nav navbar-nav navigate">
+            <li><a href="/" class="nav-item btn-d">HOME</a></li>
+            <li><a href="/phone" class="nav-item btn-display">MOBILES</a></li>
+            <li><a href="/entertainment" class="nav-item btn-display">ENTERTAINMENT</a></li>
+            <li><a href="/app" class="nav-item btn-display">APPS</a></li>
+            <li><a href="/about" class="nav-item btn-display">ABOUT</a></li>
+            <li><a href="/contact" class="nav-item btn-display">CONTACT</a></li>
+            <li><a href="/login" class="nav-item button-d">LOGIN</a></li>
+          </ul>
+        </div>
+    </div>
+    <nav class="navbar navbar-dark bg-dark">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#ToggleExternalContent" aria-controls="ToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation" onclick="myFunction()">
+        <span class="navbar-toggler-icon"></span>
+        </button>
+        <a class="navbar-brand form-inline" title="REVIWER" href="#">
+            <img class="img-logo" src="/images/logo.png">Reviewer
+        </a>
+        <form class="form-inline form-search">
+        <input class="form-control mr-sm-2" type="search" placeholder="Search for product, brand and more..." aria-label="Search" style="width:380px;">
+        <button class="btn btn-outline-success my-2 my-sm-0" type="submit"><i class="fa fa-search"></i></button>
+        </form>
+    </nav>
+    </div>
+  </header>
+  <div id="firebaseui-auth-container" style="margin-top: 210px;"></div>
+  <div id="loader">Loading...</div> 
+  <footer class="fixed-bottom footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-9">
+                    <div class="copyright">
+                        <h6>Copyright &copy; 2020 <a href="#"> Stark Industries </a></h6>
+                    </div>
+                </div>
+            </div>
+        </div>
+  </footer>
+</body>
+</html>
+
+
+<!--
+  <script>
+  // var user = firebase.auth().currentUser;
+          // user.providerData.forEach(function (profile) {
+          //   console.log("  Sign-in provider: " + profile.providerId);
+          //   console.log("  Provider-specific UID: " + profile.uid);
+          //   console.log("  Name: " + profile.displayName);
+          //   console.log("  Email: " + profile.email);
+          //   console.log("  Photo URL: " + profile.photoURL);
+          // });
+          // return true;
+  </script> 
+-->

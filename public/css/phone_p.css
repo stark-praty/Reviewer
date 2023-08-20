@@ -1,0 +1,221 @@
+body{
+    background-color: #f0b8741a;
+  }
+  .navbar-def{
+      font-size: 5px;
+  }
+  .navigate{
+    display:inline;
+  }
+  .btn-d{
+    float:left;
+    margin-left: 10px;
+  }
+  .btn-display{
+    float: left;
+    margin-left: 35px;
+  }
+  .button-d{
+    margin-left: 590px;
+  }
+  .navbar-nav > li > a{
+    font-size: large;
+    color: #b5b5b5;
+    font-family: "Raleway",sans-serif;
+    transition: all 1s;
+    -moz-transition: all 1s;
+    -o-transition: all 1s;
+    -webkit-transition: all 1s;
+  }
+  .p-3{
+    background-color: black;
+  }
+  .navbar-nav > li > a:hover{
+    text-decoration: none;
+    color: #129cf3;
+  }
+  .navbar-nav > li > a:focus{
+    text-decoration: none;
+    color: #b5b5b5;
+  }
+  .navbar-nav> .active>a,
+  .navbar-nav> .active>a:hover,
+  .navbar-nav> .active>a:focus {
+      background-color: transparent;
+      color: #129CF3;
+  }
+  .form-search{
+      margin-top: 10px;
+      margin-right: 25px;
+  }
+  .form-search button{
+      font-size: 22px;
+  }
+  .img-logo{
+    height:35;
+    width:35;
+    margin-left: 5cm;
+  }
+  section{
+    margin-top: 20px;
+    margin-left: 20px;
+    margin-right: 40px;
+  }
+  .page-wrapper .sidebar-wrapper,
+#show-sidebar,
+#close-sidebar {
+  -webkit-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  -ms-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+.page-wrapper.toggled .sidebar-wrapper {
+  left: 0px;
+}
+#show-sidebar {
+  position: fixed;
+  left: -12px;
+  top: 305px;
+  border-radius: 0 100px 100px 0px;
+  width: 40px;
+  height: 70px;
+  transition-delay: 0.3s;
+}
+.sidebar-wrapper {
+  margin-top: 112px;
+  margin-left: 1px;
+  width: 260px;
+  height: 100%;
+  max-height: 79%;
+  position: fixed;
+  top: 0;
+  left: -300px;
+  z-index: 999;
+  border-radius: 26px 26px 26px 26px; 
+}
+.close-btn{
+  background-color: #343a40;
+  border-color: #343a40;
+}
+.close-btn:hover{
+  background-color: #343a40;
+  border-color: #343a40;
+}
+.chiller-theme .sidebar-wrapper {
+    background: #343a40;
+}
+.page-wrapper.chiller-theme.toggled #close-sidebar {
+    color: #bdbdbd;
+    margin-left: 220px;
+    margin-top: 10px;
+}
+.page-wrapper.chiller-theme.toggled #close-sidebar:hover {
+    color: #ffffff;
+}
+  .card-p,
+  .card-m,
+  .card-a{  
+    width: 100%;
+    box-shadow: 0 6px 10px 0 rgba(0, 0, 0, 0.19);
+  }
+  .phone-b{
+    margin-left: 75px;
+    color: white;
+    font-size: 16px;
+  }
+  .phone-b:hover{
+      text-decoration: none;
+      font-size: 20px;
+      text-shadow: 2px 3px 3px grey;
+      font-weight: 700;
+      color: white;
+      transition: all 0.3s;
+      -moz-transition: all 0.3s;
+      -o-transition: all 0.3s;
+      -webkit-transition: all 0.3s;
+  }
+  .row-head-p form button{
+    margin-left: 590px;
+    margin-top: 12px;
+    font-size: 20px;
+  }
+  .row-head-p form button a{
+    color:white;
+  }
+  .row-head-p form>div>label{
+    font-size: 30px;
+    font-weight: 500;
+    margin-top: 12px;
+    margin-left: 20px;
+  }
+  .row-head-m form button{
+    margin-left: 710px;
+    margin-top: 12px;
+    font-size: 20px;
+  }
+  .row-head-m form>div>label{
+    font-size: 30px;
+    font-weight: 500;
+    margin-top: 12px;
+    margin-left: 20px;
+  }
+  .row-head-a form button{
+    margin-left: 610px;
+    margin-top: 12px;
+    font-size: 20px;
+  }
+  .row-head-a form>div>label{
+    font-size: 30px;
+    font-weight: 500;
+    margin-top: 12px;
+    margin-left: 20px;
+  }
+  .card-a{
+    margin-bottom: 30px;
+  }
+  .lineI{
+    margin-top: -15;
+    border: 0.5px solid lightgrey;
+  }
+  .row{
+    margin-left:20px;
+    margin-top:10px;
+  }
+  .product-box{
+    float:right;
+    width:250px;
+    transition: all 0.3s;
+    -moz-transition: all 0.3s;
+    -o-transition: all 0.3s;
+    -webkit-transition: all 0.3s;
+    text-align:center;
+  }
+  .product-box a{
+    text-decoration: none;
+    color: black; 
+  }
+  .title{
+    font-weight: 500;
+  }
+  .more{
+    color: green;
+  }
+  .footer {
+    background-color: #1a1a1a;
+    padding-bottom: 25px;
+    padding-top: 15px;
+    margin-left: 0px;
+    border-top: 3px solid #129CF3;
+  }
+  .copyright h6 {
+    margin-left: 340;
+    color: #8c8b8a;
+    font-weight: 600;
+    font-size: 15px;
+    text-transform: uppercase;
+  }
+  .copyright h6 a {
+    text-decoration: none;
+    color: #129CF3;
+  }

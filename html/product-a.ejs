@@ -1,0 +1,184 @@
+<html>
+<head>
+    <title><%= name %></title>
+    <link rel="shortcut icon" href="/images/logo.png" >
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,700;0,800;1,300;1,400;1,600&family=Poppins:ital,wght@0,200;0,300;0,400;0,500;0,600;0,800;0,900;1,200;1,400;1,500;1,600&family=Sahitya:wght@400;700&display=swap" rel="stylesheet">
+    <link href='https://fonts.googleapis.com/css?family=Ubuntu+Mono' rel='stylesheet' type='text/css'>
+    
+    <link rel="stylesheet" type="text/css" href="/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="/css/style.css">
+    <link rel="stylesheet" type="text/css" href="/css/phone.css">
+    <link rel="stylesheet" type="text/css" href="/css/jquery.bxslider.css">
+    <script src="https://kit.fontawesome.com/8e71441969.js" crossorigin="anonymous"></script>
+    <script src="/js/jquery.js"></script>
+    <script src="/js/bootstrap.min.js"></script>
+    <script src="/js/jquery.bxslider.js"></script>
+    <script src="/js/custom.js"></script>
+</head>
+<body>
+    <script>
+        $(document).ready(function(){
+            $('.bxslider').bxSlider({
+                auto: true,
+                minSlides: 2,
+                maxSlides: 4,
+                moveSlides: 1,
+                controls: true,
+                shrinkItems: true,
+                adaptiveHeight: true
+            });
+        });
+    </script>
+    <header>
+        <div class="fixed-top navbar-def">
+        <div class="collapse navbar-collapse" id="ToggleExternalContent">
+            <div class="p-3">
+            <ul class="nav navbar-nav navigate">
+                <li><a href="/" class="nav-item btn-d">HOME</a></li>
+                <li><a href="/phone" class="nav-item btn-display">MOBILES</a></li>
+                <li><a href="/entertainment" class="nav-item btn-display">ENTERTAINMENT</a></li>
+                <li><a href="/app" class="nav-item btn-display">APPS</a></li>
+                <li><a href="/about" class="nav-item btn-display">ABOUT</a></li>
+                <li><a href="/contact" class="nav-item btn-display">CONTACT</a></li>
+                <li><a href="/login" class="nav-item button-d">LOGIN</a></li>
+            </ul>
+            </div>
+        </div>
+        <nav class="navbar navbar-dark bg-dark">
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#ToggleExternalContent" aria-controls="ToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation" onclick="myFunction()">
+            <span class="navbar-toggler-icon"></span>
+            </button>
+            <a class="navbar-brand form-inline" title="REVIWER" href="#">
+                <img class="img-logo" src="/images/logo.png">Reviewer
+            </a>
+            <form class="form-inline form-search">
+            <input class="form-control mr-sm-2" type="search" placeholder="Search for product, brand and more..." aria-label="Search" style="width:380px;">
+            <button class="btn btn-outline-success my-2 my-sm-0" type="submit"><i class="fa fa-search"></i></button>
+            </form>
+        </nav>
+        </div>
+    </header>
+    <section class="phone-page">
+        <% let b = name %>
+        <% for(let prod of val) {%>
+            <% if(prod.title === b) {%>
+                <div class="container" id="product-section">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="icon-app">
+                                <img src="<%= prod.icon %>" style="height: 150;width: 150;">
+                            </div>
+                            <div>
+                                <h1 style="margin-top: -130;margin-left: 160;"><%= prod.title %></h1>
+                                <div class="devel" style="margin-left: 160;">
+                                    <h5><%= prod.developer %></h5>
+                                </div>
+                                <div class="rat-rev" style="margin-left: 845;margin-top: -30;">
+                                    <p><i><%= prod.ratings %> Rating and <%= prod.reviews %> Review</i></p>
+                                </div>
+                            </div>
+                            <div>
+                                <div style="margin-left: 160;">
+                                    <% if(prod.containsAds == 1) {%>
+                                        <h6>Contains Ads</h6>
+                                    <% }else{ %>
+                                        <h6>Not Contains Ads</h6>
+                                    <% } %>
+                                </div>
+                                <div style="margin-left: 900; margin-top: -30;">
+                                    <% if(prod.price == 0) {%>
+                                        <button style="height: 35px; width: 90px; border: 2px solid #689f38;border-radius: 10px;background-color: #689f38;color: white;"> <a href="<%= prod.url %>" style="color: #fff;"> Free </a> </button>
+                                    <% }else{ %>
+                                        <button style="height: 35px; width: 90px; border: 2px solid #689f38;border-radius: 10px;background-color: #689f38;color: white;"> <a href="<%= prod.url %>" style="color: #fff;"> <%= prod.price %> </a> </button>
+                                    <% } %>
+                                </div>
+                            </div>
+                            <% var ssho = []; %>
+                            <% for(x of ssh) {%>
+                                <% if(prod.title == x.title) {%>
+                                    <% ssho.push(x.screenshots) %>
+                                <% } %>
+                            <% } %>
+                            <div class="row">
+                                <ul class="bxslider">
+                                    <% for(let y = 0; y < ssho.length; y++) {%>
+                                        <li> <img src="<%= ssho[y] %>"> </li>
+                                    <% } %>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row row-navig">
+                    <div class="col-md-12">
+                        <!-- Nav tabs -->
+                        <ul class="nav nav-tabs" role="tablist">
+                            <li class="nav-item">
+                                <a class="nav-link" href="#features" aria-controls="features" data-toggle="tab">About</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#reviews"  data-toggle="tab" aria-controls="notes" role="tab">Reviews</a>
+                            </li>
+                        </ul>
+                        <div class="tab-content">
+                            <div id="features" class="container tab-pane active"><br>
+                                <p class="top-10">
+                                    <%= prod.description %>
+                                </p>
+                                <br>
+                                <p> <b>Developer Id:</b>   <%= prod.developerId %> </p>
+                                <p style="margin-top: -40px; margin-left: 700px;"> <b>Developer:</b>   <%= prod.developer %> </p>
+                                <p> <b>Developer Website:</b>   <%= prod.developerWebsite %> </p>
+                                <p style="margin-top: -40px; margin-left: 700px;"> <b>Developer Email:</b>   <%= prod.developerEmail %> </p>
+                                <p> <b>Developer Address:</b>   <%= prod.developerAddress %> </p>
+                                <p> <b> Content Rating: </b><%= prod.contentRating %> </p>
+                                <% if(prod.contentRatingDescription != 0) {%>
+                                    <p style="margin-top: -40px; margin-left: 700px;"> <b> Content Rating Description: </b><%= prod.contentRatingDescription %></p>
+                                <% } %>
+                                <p> <b> Android Version Required: </b><%= prod.androidVersionText %> </p>
+                                <p style="margin-top: -40px; margin-left: 700px;"> <b> Number of Installs:  </b><%= prod.installs %> </p>
+                                <p> <b> Released: </b><%= prod.released %> </p>
+                                <p style="margin-top: -40px; margin-left: 700px;"> <b> Size: </b><%= prod.size %> </p>
+                                <% if(prod.offersIAP == 1) {%>
+                                    <p> <b> InApp Purchase: </b> Yes  </p>
+                                <% }else{ %>
+                                    <p> <b> InApp Purchase: </b> No </p>
+                                <% } %>
+                                <% if(prod.inAppProductPrice != 0) {%>
+                                    <p style="margin-top: -40px; margin-left: 700px;"> <b> InApp Purchase Price: </b> <%= prod.inAppProductPrice %> </p>
+                                <% } %>
+                                <br>
+                                <br><br>
+                            </div>
+                            <div id="reviews" class="container tab-pane"><br>
+                                <% var revi = []; %>
+                                <% for(x of value) {%>
+                                    <% if(prod.title == x.app_name) {%>
+                                        <% revi.push(x.reviews) %>
+                                    <% } %>
+                                <% } %>
+                                <% for(let y = 0; y < revi.length; y++) {%>
+                                    <%= revi[y] %><br>
+                                    <hr>
+                                <% } %>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            <% } %>
+        <% } %> 
+    </section>
+    <footer class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-9">
+                    <div class="copyright">
+                        <h6>Copyright &copy; 2020 <a href="#"> Stark Industries </a></h6>
+                    </div>
+                </div>
+            </div>
+        </div>
+      </footer>
+</body>
+</html>

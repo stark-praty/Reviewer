@@ -1,0 +1,269 @@
+<html>
+<head>
+  <title>Reviewer</title>
+  <link rel="shortcut icon" href="images/logo.png" >
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,700;0,800;1,300;1,400;1,600&family=Poppins:ital,wght@0,200;0,300;0,400;0,500;0,600;0,800;0,900;1,200;1,400;1,500;1,600&family=Sahitya:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+  <link rel="stylesheet" type="text/css" href="css/phone_p.css">
+  <script src="https://kit.fontawesome.com/8e71441969.js" crossorigin="anonymous"></script>
+</head>
+<body>
+  <script src="js/jquery.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+  <script src="js/custom.js"></script>
+  <script src="js/test.js"></script>
+  <header>
+    <div class="fixed-top navbar-def">
+      <div class="collapse navbar-collapse" id="ToggleExternalContent">
+        <div class="p-3">
+          <ul class="nav navbar-nav navigate">
+              <li><a href="/" class="nav-item btn-d">HOME</a></li>
+              <li><a href="/phone" class="nav-item btn-display">MOBILES</a></li>
+              <li><a href="/entertainment" class="nav-item btn-display">ENTERTAINMENT</a></li>
+              <li><a href="/app" class="nav-item btn-display">APPS</a></li>
+              <li><a href="/about" class="nav-item btn-display">ABOUT</a></li>
+              <li><a href="/contact" class="nav-item btn-display">CONTACT</a></li>
+              <li><a href="/login" class="nav-item button-d">LOGIN</a></li>
+          </ul>
+        </div>
+      </div>
+      <nav class="navbar navbar-dark bg-dark">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#ToggleExternalContent" aria-controls="ToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation" onclick="myFunction()">
+        <span class="navbar-toggler-icon"></span>
+        </button>
+        <a class="navbar-brand form-inline" title="REVIWER" href="#">
+      		<img class="img-logo" src="images/logo.png">Reviewer
+    	  </a>
+        <form class="form-inline form-search">
+        <input class="form-control mr-sm-2" type="search" placeholder="Search for product, brand and more..." aria-label="Search" style="width:380px;">
+        <button class="btn btn-outline-success my-2 my-sm-0" type="submit"><i class="fa fa-search"></i></button>
+        </form>
+      </nav>
+    </div>
+  </header>
+  <section class="phone">
+    <div class="row">
+      <div class="col-md-2">
+        <div class="page-wrapper chiller-theme toggled">
+          <button id="show-sidebar" class="btn btn-sm btn-dark open-btn" href="#" onclick="show()">
+            <i class="fas fa-chevron-right arrow-icon"></i>
+          </button>
+          <nav id="sidebar" class="sidebar-wrapper">
+            <div class="sidebar-content">
+                <div id="close-sidebar">
+                  <button class="btn btn-md btn-dark close-btn" onclick="moveback()"><i class="fas fa-times"></i></button>
+                </div>
+                <table>
+                  <tr><td><a class="phone-b" href="/phone/acer?page=1"> ACER  </a></td></tr>
+                  <tr><td><a class="phone-b" href="/phone/apple?page=1"> APPLE  </a></td></tr>
+                  <tr><td><a class="phone-b" href="/phone/asus?page=1"> ASUS  </a></td></tr>
+                  <tr><td><a class="phone-b" href="/phone/blackberry?page=1"> BLACKBERRY  </a></td></tr>
+                  <tr><td><a class="phone-b" href="/phone/google?page=1"> GOOGLE  </a></td></tr>
+                  <tr><td><a class="phone-b" href="/phone/htc?page=1"> HTC  </a></td></tr>
+                  <tr><td><a class="phone-b" href="/phone/huawei?page=1"> HUAWEI  </a></td></tr>
+                  <tr><td><a class="phone-b" href="/phone/infinix?page=1"> INFINIX  </a></td></tr>
+                  <tr><td><a class="phone-b" href="/phone/lenovo?page=1"> LENOVO  </a></td></tr>
+                  <tr><td><a class="phone-b" href="/phone/lg?page=1"> LG  </a></td></tr>
+                  <tr><td><a class="phone-b" href="/phone/micromax?page=1"> MICROMAX  </a></td></tr>
+                  <tr><td><a class="phone-b" href="/phone/motorola?page=1"> MOTOROLA  </a></td></tr>
+                  <tr><td><a class="phone-b" href="/phone/nokia?page=1"> NOKIA  </a></td></tr>
+                  <tr><td><a class="phone-b" href="/phone/oneplus?page=1"> ONEPLUS  </a></td></tr>
+                  <tr><td><a class="phone-b" href="/phone/oppo?page=1"> OPPO </a></td></tr>
+                  <tr><td><a class="phone-b" href="/phone/panasonic?page=1"> PANASONIC  </a></td></tr>
+                  <tr><td><a class="phone-b" href="/phone/samsung?page=1"> SAMSUNG  </a></td></tr>
+                  <tr><td><a class="phone-b" href="/phone/sony?page=1"> SONY  </a></td></tr>
+                  <tr><td><a class="phone-b" href="/phone/vivo?page=1"> VIVO  </a></td></tr>
+                  <tr><td><a class="phone-b" href="/phone/xiaomi?page=1"> XIAOMI  </a></td></tr>
+                  <tr><td><a class="phone-b" href="/phone/zte?page=1"> ZTE  </a></td></tr>
+                </table>
+            </div>
+          </nav>
+        </div>
+      </div>
+      <div class="col-md-10">
+        <div class="card card-p" style="margin-top: 75px;">
+          <div class="row-head-p">
+            <form class="form-inline">
+              <div class="form-group mb-2">
+                <label>Top Trending Phones</label>
+              </div>
+            </form>
+            <hr class="lineI">   
+          </div>
+          <div class="row">
+            <div class="product-box">
+              <a href="/phone/oppo/device?name=Realme%20Narzo%2010">
+                <div class="image">
+                  <img src="https://fdn2.gsmarena.com/vv/bigpic/realme-narzo-10.jpg">
+                </div>
+                <div class="title">Realme Narzo 10
+                </div>
+                <div class="more">Oppo
+                </div>
+              </a>
+            </div>
+            <div class="product-box">
+              <a href="/phone/xiaomi/device?name=Redmi%20Note%209%20Pro%20Max">
+                <div class="image">
+                  <img src="https://fdn2.gsmarena.com/vv/bigpic/xiaomi-redmi-note-9-pro-max.jpg">
+                </div>
+                <div class="title">Redmi Note 9 Pro Max
+                </div>
+                <div class="more">Xiaomi
+                </div>
+              </a>
+            </div>
+            <div class="product-box">
+              <a href="/phone/xiaomi/device?name=Poco%20M2%20Pro">
+                <div class="image">
+                  <img src="https://fdn2.gsmarena.com/vv/bigpic/poco-m2-pro.jpg">
+                </div>
+                <div class="title">POCO M2 Pro
+                </div>
+                <div class="more">Xiaomi
+                </div>
+              </a>
+            </div>
+            <div class="product-box">
+              <a href="/phone/samsung/device?name=Galaxy%20M31s">
+                <div class="image">
+                  <img src="https://fdn2.gsmarena.com/vv/bigpic/samsung-galaxy-m31s.jpg">
+                </div>
+                <div class="title">Samsung Galaxy M31s
+                </div>
+                <div class="more">Samsung
+                </div>
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="card card-m" style="margin-top: 25px;">
+          <div class="row-head-m">
+            <form class="form-inline">
+              <div class="form-group mb-2">
+                <label>Best Phones</label>
+              </div>
+            </form>
+            <hr class="lineI">   
+          </div>
+          <div class="row">
+            <div class="product-box">
+              <a href="/phone/apple/device?name=iPhone%2011%20Pro">
+                <div class="image">
+                  <img src="https://fdn2.gsmarena.com/vv/bigpic/apple-iphone-11-pro-max-.jpg">
+                </div>
+                <div class="title">iPhone 11 Pro
+                </div>
+                <div class="more">Apple
+                </div>
+              </a>
+            </div>
+            <div class="product-box">
+              <a href="/phone/samsung/device?name=Samsung%20S20%20Ultra">
+                <div class="image">
+                  <img src="https://fdn2.gsmarena.com/vv/bigpic/samsung-galaxy-s20-ultra-.jpg">
+                </div>
+                <div class="title">Galaxy S20 Ultra
+                </div>
+                <div class="more">Samsung
+                </div>
+              </a>
+            </div>
+            <div class="product-box">
+              <a href="/phone/oneplus/device?name=8%20Pro">
+                <div class="image">
+                  <img src="https://fdn2.gsmarena.com/vv/bigpic/oneplus-8-pro.jpg">
+                </div>
+                <div class="title">Oneplus 8 Pro
+                </div>
+                <div class="more">Oneplus
+                </div>
+              </a>
+            </div>
+            <div class="product-box">
+              <a href="/phone/huawei/device?name=P30%20Pro">
+                <div class="image">
+                  <img src="https://fdn2.gsmarena.com/vv/bigpic/huawei-p30-pro-new-edition.jpg">
+                </div>
+                <div class="title">Huawei P30 Pro
+                </div>
+                <div class="more">Huawei
+                </div>
+              </a>
+            </div>
+        
+          </div>
+        </div>
+        <div class="card card-a" style="margin-top: 25px;">
+          <div class="row-head-a">
+            <form class="form-inline">
+              <div class="form-group mb-2">
+                <label>Top Budget Phones</label>
+              </div>
+            </form>
+            <hr class="lineI">   
+          </div>
+          <div class="row">
+            <div class="product-box">
+              <a href="/phone/xiaomi/device?name=Realme%20Narzo%2010A">
+                <div class="image">
+                  <img src="https://fdn2.gsmarena.com/vv/bigpic/realme-narzo-10a.jpg">
+                </div>
+                <div class="title">Realme Narzo 10A
+                </div>
+                <div class="more">Oppo
+                </div>
+              </a>
+            </div>
+            <div class="product-box">
+              <a href="/phone/vivo/device?name=U20">
+                <div class="image">
+                  <img src="https://fdn2.gsmarena.com/vv/bigpic/vivo-u20.jpg">
+                </div>
+                <div class="title">Vivo U20
+                </div>
+                <div class="more">Vivo
+                </div>
+              </a>
+            </div>
+            <div class="product-box">
+              <a href="/phone/xiaomi/device?name=Redmi%20Note%208">
+                <div class="image">
+                  <img src="https://fdn2.gsmarena.com/vv/bigpic/xiaomi-redmi-note-8-1.jpg">
+                </div>
+                <div class="title">Redmi Note 8
+                </div>
+                <div class="more">Xiaomi
+                </div>
+              </a>
+            </div>
+            <div class="product-box">
+                <a href="/phone/nokia/device?name=5.3">
+                  <div class="image">
+                    <img src="https://fdn2.gsmarena.com/vv/bigpic/nokia-53.jpg">
+                  </div>
+                  <div class="title">Nokia 5.3
+                  </div>
+                  <div class="more">Nokia
+                  </div>
+                </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <footer class="footer">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-9">
+                <div class="copyright">
+                    <h6>Copyright &copy; 2020 <a href="#"> Stark Industries </a></h6>
+                </div>
+            </div>
+        </div>
+    </div>
+  </footer>
+</body>
+</html>

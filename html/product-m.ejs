@@ -1,0 +1,203 @@
+<html>
+<head>
+    <title>MOvie</title>
+    <link rel="shortcut icon" href="/images/logo.png" >
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,700;0,800;1,300;1,400;1,600&family=Poppins:ital,wght@0,200;0,300;0,400;0,500;0,600;0,800;0,900;1,200;1,400;1,500;1,600&family=Sahitya:wght@400;700&display=swap" rel="stylesheet">
+    <link href='https://fonts.googleapis.com/css?family=Ubuntu+Mono' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" type="text/css" href="/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="/css/style.css">
+    <link rel="stylesheet" type="text/css" href="/css/movie.css">
+    <script src="https://kit.fontawesome.com/8e71441969.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <script src="/js/jquery.js"></script>
+    <script src="/js/bootstrap.min.js"></script>
+    <script src="/js/custom.js"></script>
+    <header>
+      <div class="fixed-top navbar-def">
+      <div class="collapse navbar-collapse" id="ToggleExternalContent">
+          <div class="p-3">
+            <ul class="nav navbar-nav navigate">
+              <li><a href="/" class="nav-item btn-d">HOME</a></li>
+              <li><a href="/phone" class="nav-item btn-display">MOBILES</a></li>
+              <li><a href="/entertainment" class="nav-item btn-display">ENTERTAINMENT</a></li>
+              <li><a href="/app" class="nav-item btn-display">APPS</a></li>
+              <li><a href="/about" class="nav-item btn-display">ABOUT</a></li>
+              <li><a href="/contact" class="nav-item btn-display">CONTACT</a></li>
+              <li><a href="/login" class="nav-item button-d">LOGIN</a></li>
+            </ul>
+          </div>
+      </div>
+      <nav class="navbar navbar-dark bg-dark">
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#ToggleExternalContent" aria-controls="ToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation" onclick="myFunction()">
+          <span class="navbar-toggler-icon"></span>
+          </button>
+          <a class="navbar-brand form-inline" title="REVIWER" href="#">
+              <img class="img-logo" src="/images/logo.png">Reviewer
+          </a>
+          <form class="form-inline form-search">
+          <input class="form-control mr-sm-2" type="search" placeholder="Search for product, brand and more..." aria-label="Search" style="width:380px;">
+          <button class="btn btn-outline-success my-2 my-sm-0" type="submit"><i class="fa fa-search"></i></button>
+          </form>
+      </nav>
+      </div>
+    </header>
+    <section class="movie-page">
+        <% let b = name %>
+        <% for(let prods of val) {%>
+            <% if(prods.title === b) {%>
+                <div class="row row-1">
+                    <div class="col-md-6 display">
+                        <% if(prods.trailer_img != 0) {%>
+                            <div class="photos">
+                                <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel"data-interval="2500">
+                                    <ol class="carousel-indicators">
+                                        <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+                                        <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+                                    </ol>
+                                    <div class="carousel-inner butn">
+                                        <div class="carousel-item active">
+                                        <img class="image-responsive" title="Poster" src="<%= prods.poster%>" alt="First slide">
+                                        </div>
+                                        <div class="carousel-item">
+                                        <a href="<%= prods.trailer_url %>">
+                                            <img class="image-responsive-I" title="Trailer" src="<%= prods.trailer_img %>" alt="Second slide">
+                                        </a>
+                                        </div>
+                                    <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+                                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                        <span class="sr-only">Previous</span>
+                                    </a>
+                                    <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+                                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                        <span class="sr-only">Next</span>
+                                    </a>
+                                    </div>
+                                </div>
+                            </div>
+                        <% } else { %>
+                            <div>
+                                <img class="image-responsive" src="<%= prods.poster %>" style="margin-top: 65px;">
+                            </div>
+                        <% } %>
+                    </div>
+                    <div class="col-md-5 col-content">
+                        <div class="row">
+                            <div class="col-md-12">
+                                <h2 class="title"><%= prods.title %></h2>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-11">
+                                <p style="text-transform: uppercase;"> <%= prods.tit_type %> </p>
+                                <p class="description">
+                                    <%= prods.subtext %>
+                                </p>
+                            </div>
+                        </div>
+                        <div class="row row-rate-no">
+                            <div class="col-md-11">
+                                <% if(prods.rating != 0) {%>
+                                <span class="badge badge-warning"><%= prods.rating %></span>
+                                <% } %>
+                                <% if(prods.score != 0) {%>
+                                <span class="monospaced"><%= prods.score %></span>
+                                <% } %>
+                            </div>
+                        </div>
+                        <div class="row row-rating">
+                            <div class="col-md-4">
+                                <span class="monospaced"><a href="#"> Write a Review</a></span>
+                            </div>
+                        </div>
+                        <div class="row row-badge">
+                            <div class="col-md-11">
+                                <a clas="watchList-link" href="#">
+                                    <h2 class="badge bagde-watchlist">+ Add to WatchList</h2>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="row row-description">
+                            <div class="col-md-10">
+                                <!-- Nav tabs -->
+                                <ul class="nav nav-tabs" role="tablist">
+                                    <li class="nav-item">
+                                        <a  class="nav-link" href="#description" data-toggle="tab" aria-controls="description" role="tab" >Description</a>
+                                    </li>
+                                </ul>
+                                <div class="tab-content tab-des">
+                                    <div id="description" class="container tab-pane active"><br>
+                                        <p class="about">
+                                            
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row row-2">
+                    <div class="col-md-10">
+                        <div class="row row-navig">
+                            <div class="col-md-10">
+                                <!-- Nav tabs -->
+                                <ul class="nav nav-tabs" role="tablist">
+                                    <li class="nav-item">
+                                        <a  class="nav-link" href="#storyline" data-toggle="tab" aria-controls="storyline" role="tab" >Storyline</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="#reviews" aria-controls="reviews" data-toggle="tab">Review</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="#cast"  data-toggle="tab" aria-controls="cast" role="tab">Cast</a>
+                                    </li>
+                                    
+                                </ul>
+                                <div class="tab-content">
+                                    <div id="storyline" class="container tab-pane active"><br>
+                                        <p class="about" style="margin-left: 10px;">
+                                            <%= prods.stroyline %>
+                                        </p>
+                                    </div>
+                                    <div id="reviews" class="container tab-pane"><br>
+                                        <p class="reviews">
+                                            Shabdon mai byan nhi kr skta. I don't know what to say. Wah! Wah! <br>
+                                            Aaji Ek Dum se Zindgi badlgyi,<br>
+                                            zasbat palat gye!!! 
+                                        </p>
+                                    </div>
+                                    <div id="cast" class="container tab-pane">
+                                        <div class="row row-cast" style="display: block;">
+                                            <div>
+                                                <b> DIRECTORS: </b> <%= prods.directors %>
+                                            </div>
+                                            <div>
+                                                <b> WRITERS: </b> <%= prods.writers %>
+                                            </div>
+                                            <div>
+                                                <b> CAST: </b> <%= prods.cast %>
+                                            </div>
+                                        </div>
+                                    </div>   
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            <% } %>
+        <% } %>
+    </section>
+    <footer class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-9">
+                    <div class="copyright">
+                        <h6>Copyright &copy; 2020 <a href="#"> Stark Industries </a></h6>
+                    </div>
+                </div>
+            </div>
+        </div>
+      </footer>
+</body>
+</html>    

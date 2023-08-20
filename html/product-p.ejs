@@ -1,0 +1,235 @@
+<html>
+<head>
+    <title>Phone</title>
+    <link rel="shortcut icon" href="/images/logo.png" >
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,700;0,800;1,300;1,400;1,600&family=Poppins:ital,wght@0,200;0,300;0,400;0,500;0,600;0,800;0,900;1,200;1,400;1,500;1,600&family=Sahitya:wght@400;700&display=swap" rel="stylesheet">
+    <link href='https://fonts.googleapis.com/css?family=Ubuntu+Mono' rel='stylesheet' type='text/css'>
+    
+    <link rel="stylesheet" type="text/css" href="/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="/css/style.css">
+    <link rel="stylesheet" type="text/css" href="/css/phone.css">
+    <link rel="stylesheet" type="text/css" href="/css/device.css">
+    <script src="https://kit.fontawesome.com/8e71441969.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <script src="/js/jquery.js"></script>
+    <script src="/js/bootstrap.min.js"></script>
+    <script src="/js/custom.js"></script>
+    <header>
+        <div class="fixed-top navbar-def">
+        <div class="collapse navbar-collapse" id="ToggleExternalContent">
+            <div class="p-3">
+            <ul class="nav navbar-nav navigate">
+                <li><a href="/" class="nav-item btn-d">HOME</a></li>
+                <li><a href="/phone" class="nav-item btn-display">MOBILES</a></li>
+                <li><a href="/entertainment" class="nav-item btn-display">ENTERTAINMENT</a></li>
+                <li><a href="/app" class="nav-item btn-display">APPS</a></li>
+                <li><a href="/about" class="nav-item btn-display">ABOUT</a></li>
+                <li><a href="/contact" class="nav-item btn-display">CONTACT</a></li>
+                <li><a href="/login" class="nav-item button-d">LOGIN</a></li>
+            </ul>
+            </div>
+        </div>
+        <nav class="navbar navbar-dark bg-dark">
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#ToggleExternalContent" aria-controls="ToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation" onclick="myFunction()">
+            <span class="navbar-toggler-icon"></span>
+            </button>
+            <a class="navbar-brand form-inline" title="REVIWER" href="#">
+                <img class="img-logo" src="/images/logo.png">Reviewer
+            </a>
+            <form class="form-inline form-search">
+            <input class="form-control mr-sm-2" type="search" placeholder="Search for product, brand and more..." aria-label="Search" style="width:380px;">
+            <button class="btn btn-outline-success my-2 my-sm-0" type="submit"><em class="fa fa-search"></em></button>
+            </form>
+        </nav>
+        </div>
+    </header>
+    <section class="phone-page">
+        <% let b = name %>
+        <% for(let prods of val) {%>
+                <% if(prods.Model === b) {%>
+                    <div class="container" id="product-section">
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div>
+                                    <img class="image-responsive" src="<%= prods.mobile_img %>" style="height: 70%;width:50%;margin-top: 15px;">
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <h2><%= name %></h2>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <span class="monospaced"><%= prods.average_rating %></span>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <span class="monospaced"><a href="#">Write a Review  <b>+</b></a></span>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <h2 class="product-price"><%= prods.price %></h2>
+                                    </div>
+                                </div>
+                                <div class="row row-navig">
+                                    <div class="col-md-12">
+                                        <!-- Nav tabs -->
+                                        <ul class="nav nav-tabs" role="tablist">
+                                            <li class="nav-item">
+                                                <a  class="nav-link" href="#description" data-toggle="tab" aria-controls="description" role="tab" >Description</a>
+                                            </li>
+                                        </ul>
+                                        <div class="tab-content">
+                                            <div id="description" class="container tab-pane active"><br>
+                                                <p class="top-10">
+                                                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptates iste dignissimos deleniti ipsam non incidunt explicabo amet adipisci a! Quod doloribus blanditiis dolorum quos cumque, similique recusandae sunt quibusdam? Ad.
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row row-navig">
+                        <div class="col-md-12">
+                            <!-- Nav tabs -->
+                            <ul class="nav nav-tabs" role="tablist">
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#features" aria-controls="features" data-toggle="tab">Features</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#reviews"  data-toggle="tab" aria-controls="notes" role="tab">Reviews</a>
+                                </li>
+                            </ul>
+                            <div class="tab-content">
+                                <div id="features" class="container tab-pane active"><br>
+                                    <p>
+                                        <h6 class="prameter"> Release Date: </h6><p class="prameter_value"><%= prods.Release_date %></p>
+                                        <h6 class="prameter"> Launched in India: </h6><p class="prameter_value"><%= prods.Launched_in_India %></p>
+                                        <h6 class="prameter"> Form Factor: </h6><p class="prameter_value"><%= prods.Form_factor %></p>
+                                        <h6 class="prameter"> Battery Capacity(mAh): </h6><p class="prameter_value"><%= prods.Battery_capacity %></p>
+                                        <h6 class="prameter"> Fast Charging: </h6><p class="prameter_value"><%= prods.Fast_charging %></p>
+                                        <h6 class="prameter"> Color: </h6><p class="prameter_value"><%= prods.Colours %></p>
+                                        <h6 class="prameter"> Screen Size(inches): </h6><p class="prameter_value"><%= prods.Screen_size %></p>
+                                        <h6 class="prameter"> Touchscreen: </h6><p class="prameter_value"><%= prods.Touchscreen %></p>
+                                        <h6 class="prameter"> Resolution: </h6><p class="prameter_value"><%= prods.Resolution %></p>
+                                        <h6 class="prameter"> Protection Type: </h6><p class="prameter_value"><%= prods.Protection_type %></p>
+                                        <h6 class="prameter"> Aspect Ratio: </h6><p class="prameter_value"><%= prods.Aspect_ratio %></p>
+                                        <h6 class="prameter"> Processor Type: </h6><p class="prameter_value"><%= prods.Processor %></p>
+                                        <h6 class="prameter"> Processor: </h6><p class="prameter_value"><%= prods.Processor_make %></p>
+                                        <h6 class="prameter"> RAM: </h6><p class="prameter_value"><%= prods.RAM %></p>
+                                        <h6 class="prameter"> Internal Storage: </h6><p class="prameter_value"><%= prods.Internal_storage %></p>
+                                        <h6 class="prameter"> Expandable Storage: </h6><p class="prameter_value"><%= prods.Expandable_storage %></p>
+                                        <h6 class="prameter"> Expandable Storage Type: </h6><p class="prameter_value"><%= prods.Expandable_storage_type %></p>
+                                        <h6 class="prameter"> Expandable Storage up to(GB): </h6><p class="prameter_value"><%= prods.Expandable_storage_up_to %></p>
+                                        <h6 class="prameter"> Dedicated microSD Slot: </h6><p class="prameter_value"><%= prods.Dedicated_microSD_slot %></p>
+                                        <h6 class="prameter"> Rear Camera: </h6><p class="prameter_value"><%= prods.Rear_camera %></p>
+                                        <h6 class="prameter"> Rear Autofocus: </h6><p class="prameter_value"><%= prods.Rear_autofocus %></p>
+                                        <h6 class="prameter"> Rear Flash: </h6><p class="prameter_value"><%= prods.Rear_flash %></p>
+                                        <h6 class="prameter"> Front Camera: </h6><p class="prameter_value"><%= prods.Front_camera %></p>
+                                        <h6 class="prameter"> Operating System: </h6><p class="prameter_value"><%= prods.Operating_system %></p>
+                                        <h6 class="prameter"> Wi-Fi: </h6><p class="prameter_value"><%= prods.WiFi %></p>
+                                        <h6 class="prameter"> Wi-Fi_standards_supported: </h6><p class="prameter_value"><%= prods.WiFi_standards_supported %></p>
+                                        <h6 class="prameter"> GPS: </h6><p class="prameter_value"><%= prods.GPS %></p>
+                                        <h6 class="prameter"> Bluetooth: </h6><p class="prameter_value"><%= prods.Bluetooth %></p>
+                                        <h6 class="prameter"> Micro-USB: </h6><p class="prameter_value"><%= prods.MicroUSB %></p>
+                                        <h6 class="prameter"> Number of SIMs: </h6><p class="prameter_value"><%= prods.Number_of_SIMs %></p>
+                                        <h6 class="prameter"> SIM Type: </h6><p class="prameter_value"><%= prods.SIM_Type %></p>
+                                        <h6 class="prameter"> GSM/CDMA: </h6><p class="prameter_value"><%= prods.GSMCDMA %></p>
+                                        <h6 class="prameter"> 3G: </h6><p class="prameter_value"><%= prods.ThreeG %></p>
+                                        <h6 class="prameter"> 4G/LTE: </h6><p class="prameter_value"><%= prods.FourGLTE %></p>
+                                        <h6 class="prameter"> Supports 4G in India(Band 40): </h6><p class="prameter_value"><%= prods.Supports_FourG_in_India %></p>
+                                        <h6 class="prameter"> Proximity Sensor: </h6><p class="prameter_value"><%= prods.Proximity_sensor %></p>
+                                        <h6 class="prameter"> Accelerometer: </h6><p class="prameter_value"><%= prods.Accelerometer %></p>
+                                        <h6 class="prameter"> Ambient Light Sensor: </h6><p class="prameter_value"><%= prods.Ambient_light_sensor %></p>
+                                        <h6 class="prameter"> Gyroscope: </h6><p class="prameter_value"><%= prods.Gyroscope %></p>
+                                        <h6 class="prameter"> Body Type: </h6><p class="prameter_value"><%= prods.Body_type %></p>
+                                        <h6 class="prameter"> Dimensions(mm): </h6><p class="prameter_value"><%= prods.Dimensions %></p>
+                                        <h6 class="prameter"> Weight(g): </h6><p class="prameter_value"><%= prods.Weight %></p>
+                                        <h6 class="prameter"> Removable Battery: </h6><p class="prameter_value"><%= prods.Removable_battery %></p>
+                                        <h6 class="prameter"> Wireless Charging: </h6><p class="prameter_value"><%= prods.Wireless_charging %></p>
+                                        <h6 class="prameter"> SAR Value: </h6><p class="prameter_value"><%= prods.SAR_value %></p>
+                                        <h6 class="prameter"> Front Autofocus: </h6><p class="prameter_value"><%= prods.Front_autofocus %></p>
+                                        <h6 class="prameter"> Front Flash: </h6><p class="prameter_value"><%= prods.Front_flash %></p>
+                                        <h6 class="prameter"> NFC: </h6><p class="prameter_value"><%= prods.NFC %></p>
+                                        <h6 class="prameter"> Infrared: </h6><p class="prameter_value"><%= prods.Infrared %></p>
+                                        <h6 class="prameter"> USB_OTG: </h6><p class="prameter_value"><%= prods.USB_OTG %></p>
+                                        <h6 class="prameter"> USB_Type-C: </h6><p class="prameter_value"><%= prods.USB_TypeC %></p>
+                                        <h6 class="prameter"> Lightning: </h6><p class="prameter_value"><%= prods.Lightning %></p>
+                                        <h6 class="prameter"> Headphones: </h6><p class="prameter_value"><%= prods.Headphones %></p>
+                                        <h6 class="prameter"> FM: </h6><p class="prameter_value"><%= prods.FM %></p>
+                                        <h6 class="prameter"> Active 4G on both SIM cards: </h6><p class="prameter_value"><%= prods.Active_FourG_on_both_SIM_cards %></p>
+                                        <h6 class="prameter"> Compass/Magnetometer: </h6><p class="prameter_value"><%= prods.CompassMagnetometer %></p>
+                                        <h6 class="prameter"> Wi-Fi_Direct: </h6><p class="prameter_value"><%= prods.WiFi_Direct %></p>
+                                        <h6 class="prameter"> Mobile High-Definition Link(MHL): </h6><p class="prameter_value"><%= prods.Mobile_HighDefinition_Link %></p>
+                                        <h6 class="prameter"> Barometer: </h6><p class="prameter_value"><%= prods.Barometer %></p>
+                                        <h6 class="prameter"> Temperature Sensor: </h6><p class="prameter_value"><%= prods.Temperature_sensor %></p>
+                                        <h6 class="prameter"> Pixels Per Inch(PPI): </h6><p class="prameter_value"><%= prods.Pixels_per_inch %></p>
+                                        <h6 class="prameter"> Skin: </h6><p class="prameter_value"><%= prods.Skin %></p>
+                                        <h6 class="prameter"> Thickness: </h6><p class="prameter_value"><%= prods.Thickness %></p>
+                                        <h6 class="prameter"> Alternate Names: </h6><p class="prameter_value"><%= prods.Alternate_names %></p>
+                                        <h6 class="prameter"> Fingerprint Sensor: </h6><p class="prameter_value"><%= prods.Fingerprint_sensor %></p>
+                                        <h6 class="prameter"> Face Unlock: </h6><p class="prameter_value"><%= prods.Face_unlock %></p>
+                                        <h6 class="prameter"> IP Rating: </h6><p class="prameter_value"><%= prods.IP_rating %></p>
+                                        <h6 class="prameter"> 5G: </h6><p class="prameter_value"><%= prods.FiveG %></p>
+                                        <h6 class="prameter"> 3D Face Recognition: </h6><p class="prameter_value"><%= prods.ThreeD_face_recognition%></p>
+                                        <h6 class="prameter"> Pop-Up Camera: </h6><p class="prameter_value"><%= prods.PopUp_Camera %></p>
+                                        <h6 class="prameter"> In-Display Fingerprint Sensor: </h6><p class="prameter_value"><%= prods.InDisplay_Fingerprint_Sensor %></p>
+                                        <h6 class="prameter"> Width: </h6><p class="prameter_value"><%= prods.Width %></p>
+                                        <h6 class="prameter"> Rear Third Camera Attributes: </h6><p class="prameter_value"><%= prods.Rear_third_camera_attr %></p>
+                                    </p>
+                                </div>
+                                <div id="reviews" class="container tab-pane"><br>
+                                    <p class="top-10">
+                                        <% for(g of valu) {%>
+                                            <% if(prods.Model == g.Model_x) {%>
+                                                <p><b> Rating on Reviews: </b> <%= g.review_rating %> </p>
+                                            <% } %>
+                                        <% } %>
+                                        <% var rn  = [],rh = [],rb = []; %>
+                                        <% for(x of value) {%>
+                                            <% if(prods.mobile == x.mobile) {%>
+                                                <% rn.push(x.by) %>
+                                                <% rh.push(x.head) %>
+                                                <% rb.push(x.body) %>
+                                            <% } %>
+                                        <% } %>
+                                        <% for(let y = 0; y < rn.length; y++) {%>
+                                            <h5><%= rn[y] %></h5>
+                                            <h6><%= rh[y] %></h6>
+                                            <p style="margin-top: -5px;margin-bottom: 15px;"><%= rb[y] %></p>
+                                            <hr>
+                                        <% } %>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                <% } %>
+        <% } %>    
+    </section>
+    <footer class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-9">
+                    <div class="copyright">
+                        <h6>Copyright &copy; 2020 <a href="#"> Stark Industries </a></h6>
+                    </div>
+                </div>
+            </div>
+        </div>
+      </footer>
+</body>
+</html>
