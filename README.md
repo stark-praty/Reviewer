@@ -10,5 +10,5 @@ Efficiency is paramount, and that's why we've employed Python-generated CSV file
 
 Embark on this thrilling voyage of exploration and revelation. Immerse yourself in the seamless blend of cutting-edge technology and insightful data, crafting an unmatched user experience. As our platform unfolds, we extend a heartfelt invitation to discover a realm where comprehensive reviews are just a click away. Step into the forefront of product exploration – welcome to our web application! Your gateway to informed decisions and an enriched digital journey beckons.
 
-LANGUAGES/TOOLS:
+<h4>LANGUAGES/TOOLS:<h4>
 Python, HTMl5, CSS, Selenium, Node.Js, Jupyter, Google Collab, Firebase
